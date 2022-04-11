@@ -246,7 +246,8 @@ ul {
 .slide-btn {
   position: absolute;
   bottom: 5%;
-  right: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
   padding: 1rem;
   color: var(--white);
