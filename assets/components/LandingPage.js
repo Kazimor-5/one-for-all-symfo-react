@@ -11,6 +11,8 @@ import EvenementSlider from './landing page/EvenementSlider';
 import Soutiens from './landing page/Soutiens';
 import Reseau from './landing page/Reseau';
 import Communaute from './landing page/Communaute';
+import Challenge from './landing page/Challenge';
+import News from './landing page/News';
 // ! FILES
 import React from 'react';
 
@@ -29,6 +31,8 @@ const LandingPage = () => {
       <Soutiens />
       <Reseau />
       <Communaute />
+      <Challenge />
+      <News />
     </main>
   );
 };
