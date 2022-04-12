@@ -8,10 +8,11 @@ import Histoire from './landing page/Histoire';
 import Constat from './landing page/Constat';
 import Revolution from './landing page/Revolution';
 import EvenementSlider from './landing page/EvenementSlider';
+import Soutiens from './landing page/Soutiens';
+import Reseau from './landing page/Reseau';
+import Communaute from './landing page/Communaute';
 // ! FILES
 import React from 'react';
-import '../styles/normalize.css';
-import '../styles/index.css';
 
 const LandingPage = () => {
   return (
@@ -25,6 +26,9 @@ const LandingPage = () => {
       <Constat />
       <Revolution />
       <EvenementSlider />
+      <Soutiens />
+      <Reseau />
+      <Communaute />
     </main>
   );
 };
