@@ -13,21 +13,21 @@ https://symfony.com/download
 # Installation
 Une fois ceci fois il faudra cloner le projet depuis le repository Gît : https://github.com/Kazimor-5/one-for-all-symfo-react
 Une fois ceci fait, rendez vous dans le dossier que vous venez de cloner et effectuer cette commande :  
-`composer install`
+`composer install`  
 Elle téléchargera toutes les dépendances liées au projet Symfony.
 
 Toujours dans le même dossier, effectuez cette commande :  
-`Npm i`
+`Npm i`  
 Cela installera toutes les dépendances liées à JS dont React. 
  
 # Utilisation
 
 Pour que le projet soit utilisable il va falloir ouvrir 2 terminals en même temps pour lancer les serveurs back et front. 
 
-Pour lancer le back il faut utiliser : 
-`symfony server:start`
+Pour lancer le back il faut utiliser :  
+`symfony server:start`  
 
-Pour le front il faut utiliser : 
-`Npm run watch`
+Pour le front il faut utiliser :   
+`Npm run watch`  
 
 Voilà vous êtes fins prêt à contribuer au projet !
