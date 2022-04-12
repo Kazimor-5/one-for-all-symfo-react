@@ -5,6 +5,9 @@ import Mouvement from './landing page/Mouvement';
 import Fonctionnement from './landing page/Fonctionnement';
 import Philosophie from './landing page/Philosophie';
 import Histoire from './landing page/Histoire';
+import Constat from './landing page/Constat';
+import Revolution from './landing page/Revolution';
+import EvenementSlider from './landing page/EvenementSlider';
 // ! FILES
 import React from 'react';
 import '../styles/normalize.css';
@@ -19,6 +22,9 @@ const LandingPage = () => {
       <Fonctionnement />
       <Philosophie />
       <Histoire />
+      <Constat />
+      <Revolution />
+      <EvenementSlider />
     </main>
   );
 };

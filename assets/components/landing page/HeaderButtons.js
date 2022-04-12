@@ -1,16 +1,16 @@
 // ! FILES
 import React from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { slides } from '../../data';
+import { headerSlides } from '../../data';
 
 const HeaderButtons = ({ setIndex }) => {
   const checkIndex = (i) => {
-    if (i > slides.length - 1) {
+    if (i > headerSlides.length - 1) {
       return 0;
     }
 
     if (i < 0) {
-      return slides.length - 1;
+      return headerSlides.length - 1;
     }
 
     return i;

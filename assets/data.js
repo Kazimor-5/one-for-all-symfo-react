@@ -71,47 +71,68 @@ export const navLinks = [
   },
 ];
 
-export const slides = [
+export const headerSlides = [
   {
     id: 1,
     name: 'mission animalière',
-    src: './assets/slide_header/slide_animalier/Slide-baleine.jpg',
+    src: './assets/missions/Slide-baleine.png',
     anchor: '#',
   },
   {
     id: 2,
     name: 'mission environnementale',
-    src: './assets/slide_header/slide_environnement/SLIDE-environnement.jpg',
+    src: './assets/missions/SLIDE-environnement.png',
     anchor: '#',
   },
   {
     id: 3,
     name: 'mission humanitaire',
-    src: './assets/slide_header/slide_humanitaire/SLIDE-humanitaire.jpg',
+    src: './assets/missions/SLIDE-humanitaire.png',
     anchor: '#',
   },
   {
     id: 4,
     name: 'nos soutiens',
-    src: './assets/slide_header/slide_ligue/Slide-Ligue.jpg',
+    src: './assets/missions/Slide-Ligue.png',
     anchor: '#',
   },
   {
     id: 5,
     name: 'notre philosophie',
-    src: './assets/slide_header/slide_philo/Slide-MARTIN-LK.jpg',
+    src: './assets/missions/Slide-MARTIN-LK.png',
     anchor: '#',
   },
   {
     id: 6,
     name: 'notre réseau',
-    src: './assets/slide_header/slide_reseau/Slide-Notre-réseau.jpg',
+    src: './assets/missions/Slide-Notre-reseau.png',
     anchor: '#',
   },
   {
     id: 7,
     name: 'Faire un don',
     src: './assets/slide_header/donation.jpg',
+    anchor: '#',
+  },
+];
+
+export const evenementSlides = [
+  {
+    id: 1,
+    name: 'défi famine',
+    src: './assets/evenement/defi_famine_2.png',
+    anchor: '#',
+  },
+  {
+    id: 2,
+    name: 'challenge #JeSuisOne4All',
+    src: './assets/evenement/je_suis_one4all.png',
+    anchor: '#',
+  },
+  {
+    id: 3,
+    name: 'challenge #JeSuisOne4All',
+    src: './assets/evenement/je_suis_one4all_2.png',
     anchor: '#',
   },
 ];

@@ -224,7 +224,7 @@ ul {
 
 .slider-container {
   position: relative;
-  height: 650px;
+  aspect-ratio: 16/9;
   overflow: hidden;
 }
 
@@ -249,12 +249,13 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  padding: 1rem;
+  padding: 0.7rem;
   color: var(--white);
   background-color: var(--primary-purple);
   text-transform: capitalize;
   border-radius: var(--border-radius);
   transition: var(--transition);
+  font-size: 0.7rem;
 }
 
 .slide-btn:hover {
@@ -264,17 +265,17 @@ ul {
 .prev-btn,
 .next-btn {
   position: absolute;
-  bottom: 30%;
+  bottom: 5%;
   transform: translateY(-50%);
 }
 
 .prev-btn {
-  left: 5%;
+  left: 10%;
   transform: translateX(-50%);
 }
 
 .next-btn {
-  right: 5%;
+  right: 10%;
   transform: translateX(50%);
 }
 
@@ -294,13 +295,14 @@ ul {
 
 /* ! HEADER FIXE */
 .background {
-  height: 100vh;
   background-image: url('../../public/assets/header/header.jpg');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 1rem;
 }
 
 .logo-fleur {
@@ -309,7 +311,7 @@ ul {
 
 .logo-fleur,
 .text-container {
-  margin-bottom: 12rem;
+  margin-bottom: 5rem;
 }
 
 .text-container {
@@ -317,6 +319,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  width: 70%;
 }
 
 .text-noir {
@@ -326,7 +329,7 @@ ul {
 /* ! MOUVEMENT */
 
 .section-mouvement {
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,9 +337,8 @@ ul {
 }
 
 .title-mouvement {
-  margin-left: 3rem;
   align-self: flex-start;
-  font-size: 1.5rem;
+  font-size: 1.02rem;
   margin-bottom: 1.5rem;
   position: relative;
 }
@@ -354,6 +356,7 @@ ul {
 
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -361,7 +364,6 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.15rem;
 }
 
 .img-fleur {
@@ -369,7 +371,6 @@ ul {
 }
 
 .domaines p {
-  font-size: 1.15rem;
   text-transform: uppercase;
 }
 
@@ -378,7 +379,6 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  font-size: 1.15rem;
 }
 
 .objectifs p {
@@ -387,7 +387,7 @@ ul {
 
 /* ! FONCTIONNEMENT */
 .section-fonctionnement {
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -397,6 +397,7 @@ ul {
 
 .fonctionnement {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
@@ -410,12 +411,13 @@ ul {
 
 .fonctionnement h3 {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.02rem;
   align-self: flex-start;
 }
 
 .fonctionnement-img-container {
-  width: 40%;
+  width: 90%;
+  margin-top: 1.5rem;
 }
 
 /* ! PHILOSOPHIE */
@@ -438,10 +440,9 @@ ul {
 }
 
 .philo-title {
+  margin-left: 1rem;
   align-self: flex-start;
-  margin-left: 3rem;
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.02rem;
   position: relative;
   display: inline;
 }
@@ -458,13 +459,13 @@ ul {
 }
 
 .gandhi-img-container {
-  width: 50%;
+  width: 80%;
 }
 
 .wave {
   width: 100%;
   transform: rotate(180deg);
-  margin-top: 12.5rem;
+  margin-top: 1.5rem;
   margin-bottom: -0.5rem;
 }
 
@@ -474,6 +475,7 @@ ul {
 
 .founder {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-color: #51647e;
@@ -483,7 +485,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 80%;
 }
 
 .philo-content {
@@ -493,7 +495,7 @@ ul {
   justify-content: space-around;
   row-gap: 1.25rem;
   color: var(--white);
-  font-size: 1.1875rem;
+  padding: 1rem;
 }
 
 .white {
@@ -514,12 +516,13 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 1.5rem;
+  padding: 1rem;
   row-gap: 2.5rem;
 }
 
 .samurai-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   width: 90%;
@@ -543,12 +546,13 @@ ul {
 
 .hope {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
 .hope-img-container {
-  width: 40%;
+  width: 90%;
 }
 
 .hope-text {
@@ -562,6 +566,10 @@ ul {
   row-gap: 0.5rem;
 }
 
+.soleil-img-container {
+  width: 70%;
+}
+
 .btn-red {
   background-color: var(--red);
   border: 2px solid var(--red);
@@ -570,4 +578,98 @@ ul {
 .btn-red:hover {
   background-color: var(--white);
   color: var(--red);
+}
+
+/* ! CONSTAT */
+.section-constat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+}
+
+.constat-title {
+  align-self: flex-start;
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.constat-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: 0.5rem;
+  background-color: var(--primary-purple);
+}
+
+.constat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.hand-img-container,
+.hand-img-container > img {
+  border-radius: var(--border-radius);
+}
+
+/* ! REVOLUTION */
+.section-revolution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.revolution-title {
+  align-self: flex-start;
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.revolution-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: 0.5rem;
+  background-color: var(--primary-purple);
+}
+
+.revolution-content,
+.article-ambition {
+  padding: 1rem;
+}
+
+.article-ambition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.25rem;
+}
+
+/* ! EVENEMENT-SLIDER */
+.evenement-slider {
+  position: relative;
+}
+
+.event-slider-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.event-img {
+  object-fit: contain;
 }
