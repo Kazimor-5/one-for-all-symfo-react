@@ -12,7 +12,7 @@ https://symfony.com/download
 
 # Installation
 Une fois ceci fois il faudra cloner le projet depuis le repository Gît : https://github.com/Kazimor-5/one-for-all-symfo-react
-Une fois ceci fait, rendez vous dans le dossier que vous venez de cloner et effectuer cette commande : 
+Une fois ceci fait, rendez vous dans le dossier que vous venez de cloner et effectuer cette commande :  
 `composer install`
 Elle téléchargera toutes les dépendances liées au projet Symfony.
 
