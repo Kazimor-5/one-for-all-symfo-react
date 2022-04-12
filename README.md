@@ -16,7 +16,7 @@ Une fois ceci fait, rendez vous dans le dossier que vous venez de cloner et effe
 `composer install`
 Elle téléchargera toutes les dépendances liées au projet Symfony.
 
-Toujours dans le même dossier, effectuez cette commande : 
+Toujours dans le même dossier, effectuez cette commande :  
 `Npm i`
 Cela installera toutes les dépendances liées à JS dont React. 
  
