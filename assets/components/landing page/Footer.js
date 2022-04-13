@@ -1,3 +1,5 @@
+// ! COMPONENTS
+import BtnUp from './BtnUp';
 // ! FILES
 import React from 'react';
 import { follow, navLinks } from '../../data';
@@ -23,7 +25,7 @@ const Footer = () => {
 
           return (
             <a key={id} href={anchor} className={`follow-anchor ${network}`}>
-              <span className='follow-icon'>{icon}</span>
+              <i className='follow-icon'>{icon}</i>
             </a>
           );
         })}
@@ -42,6 +44,7 @@ const Footer = () => {
           }
         })}
       </article>
+      <BtnUp />
     </footer>
   );
 };
