@@ -6,8 +6,9 @@ import {
   FaYoutube,
   FaInstagram,
   FaTwitter,
+  FaUserPlus,
 } from 'react-icons/fa';
-import { BiDonateHeart } from 'react-icons/bi';
+import { BiDonateHeart, BiMessageDetail } from 'react-icons/bi';
 
 export const navLinks = [
   {
@@ -277,7 +278,7 @@ export const people = [
 export const news = [
   {
     id: 1,
-    bgImage: './assets/news/minia_yt_1.jpg',
+    bgImage: './assets/news/minia_yt_1.png',
     logo: './assets/header/logocolor.png',
     title: '#One4all - Rejoignez-nous !',
     date: '21 sept 2021',
@@ -285,10 +286,11 @@ export const news = [
     anchor: '#',
     text: 'Voir la publication',
     icon: <FaYoutube />,
+    network: 'youtube',
   },
   {
     id: 2,
-    bgImage: './assets/news/minia_yt_2.jpg',
+    bgImage: './assets/news/minia_yt_2.png',
     logo: './assets/header/logocolor.png',
     title: 'Matt Damon supporting #One4All and Don Vebole',
     date: '21 sept 2021',
@@ -296,6 +298,7 @@ export const news = [
     anchor: '#',
     text: 'Voir la publication',
     icon: <FaYoutube />,
+    network: 'youtube',
   },
   {
     id: 3,
@@ -307,6 +310,7 @@ export const news = [
     anchor: '#',
     text: 'Voir la publication',
     icon: <FaInstagram />,
+    network: 'instagram',
   },
   {
     id: 4,
@@ -318,6 +322,7 @@ export const news = [
     anchor: '#',
     text: 'Voir la publication',
     icon: <FaInstagram />,
+    network: 'instagram',
   },
   {
     id: 5,
@@ -329,9 +334,10 @@ export const news = [
     anchor: '#',
     text: 'Voir la publication',
     icon: <FaFacebook />,
+    network: 'facebook',
   },
   {
-    id: 4,
+    id: 6,
     bgImage: './assets/news/minia_insta_2.jpg',
     logo: './assets/header/logocolor.png',
     title: 'Le mouvement altruiste #One4all',
@@ -340,5 +346,54 @@ export const news = [
     anchor: '#',
     text: 'Voir la publication',
     icon: <FaFacebook />,
+    network: 'facebook',
+  },
+];
+
+export const contact = [
+  {
+    id: 1,
+    question: 'Une question ?',
+    cta: 'Nous contacter',
+    icon: <BiMessageDetail />,
+  },
+  {
+    id: 2,
+    question: 'Rejoindre ou postuler ?',
+    cta: 'Nous rejoindre',
+    icon: <FaUserPlus />,
+  },
+  {
+    id: 3,
+    question: 'Adhérer à notre cause?',
+    cta: 'Adhérer',
+    icon: <FaHeart />,
+  },
+  {
+    id: 4,
+    question: 'Faire un don ?',
+    cta: 'Faire un don',
+    icon: <BiDonateHeart />,
+  },
+];
+
+export const follow = [
+  {
+    id: 1,
+    icon: <FaFacebook />,
+    network: 'fb',
+    anchor: 'https://www.facebook.com/One4All.world',
+  },
+  {
+    id: 2,
+    icon: <FaInstagram />,
+    network: 'insta',
+    anchor: 'https://www.instagram.com/one4all.world/',
+  },
+  {
+    id: 3,
+    icon: <FaYoutube />,
+    network: 'ytb',
+    anchor: 'https://www.youtube.com/channel/UCuaNm_aJfS8WSpH-oTUHQsg',
   },
 ];

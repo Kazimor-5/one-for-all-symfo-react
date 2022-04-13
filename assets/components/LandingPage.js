@@ -13,6 +13,9 @@ import Reseau from './landing page/Reseau';
 import Communaute from './landing page/Communaute';
 import Challenge from './landing page/Challenge';
 import News from './landing page/News';
+import Evenement from './landing page/Evenement';
+import Contact from './landing page/Contact';
+import Footer from './landing page/Footer';
 // ! FILES
 import React from 'react';
 
@@ -33,6 +36,9 @@ const LandingPage = () => {
       <Communaute />
       <Challenge />
       <News />
+      <Evenement />
+      <Contact />
+      <Footer />
     </main>
   );
 };

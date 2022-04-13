@@ -668,6 +668,7 @@ ul {
   overflow: hidden;
   width: 90%;
   margin: 0 auto;
+  background: var(--bg-color);
 }
 
 .event-img {
@@ -996,4 +997,280 @@ ul {
 .event {
   align-self: flex-start;
   text-transform: uppercase;
+}
+
+/* ! NEWS */
+
+.section-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.news-title {
+  align-self: flex-start;
+  position: relative;
+}
+
+.news-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: 0.5rem;
+  background-color: var(--primary-purple);
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center;
+  row-gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1rem;
+  background-color: var(--white);
+  box-shadow: var(--shadow-2);
+  border-radius: var(--border-radius);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.bg-container,
+.bg-container > img {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.bg-container {
+  height: 150px;
+  overflow: hidden;
+}
+
+.card-title {
+  z-index: 1;
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.header p {
+  margin: 0;
+}
+
+.logo-container {
+  width: 80px;
+  height: 80px;
+  padding: 0.5rem;
+  background-color: var(--black);
+  border-radius: 0.75rem;
+  border: 0.1875rem solid var(--white);
+  margin-top: -2.5rem;
+  margin-left: 0.25rem;
+}
+
+.description {
+  padding: 0 0.75rem;
+}
+
+.description a {
+  color: var(--primary-purple);
+}
+
+.icon-container {
+  margin: 0.5rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.youtube {
+  background-color: #ff0000;
+}
+
+.instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.facebook {
+  background: linear-gradient(#08c8fe, #0f70fd);
+}
+
+/* ! EVENEMENTS */
+.section-evenement {
+  background-image: url('../../public/assets/evenement/Concerts\ festivals.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.evenement-title p {
+  text-transform: uppercase;
+}
+
+.evenement-title > h2 {
+  position: relative;
+}
+
+.evenement-title > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: 0.5rem;
+  background-color: var(--primary-purple);
+}
+
+.evenement-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+}
+
+/* ! CONTACT */
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem;
+}
+
+.contact-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  row-gap: 1.5rem;
+}
+
+.contact-cell {
+  width: 90%;
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+}
+
+.btn-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 0.5rem;
+}
+
+.contact-icon {
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
+.contact-cell:hover {
+  box-shadow: var(--shadow-4);
+}
+
+/* ! FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem;
+  row-gap: 1.5rem;
+  background-color: #192136;
+  color: var(--white);
+}
+
+.copyright,
+.propos,
+.follow,
+.menu {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1rem;
+}
+
+.copyright p,
+.propos p {
+  margin: 0;
+}
+
+.propos h4,
+.follow h4,
+.menu h4 {
+  text-transform: uppercase;
+}
+
+.propos a,
+.menu a {
+  color: var(--white);
+}
+
+.menu a {
+  text-transform: capitalize;
+}
+
+.follow-anchor {
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  background: var(--white);
+  color: var(--black);
+}
+
+.follow-anchor .fb::before {
+}
+
+.follow-icon {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
 }
