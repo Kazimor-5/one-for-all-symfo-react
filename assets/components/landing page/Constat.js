@@ -1,10 +1,19 @@
 import React from 'react';
+import useIntersect from './useIntersect';
 
 const Constat = () => {
+  const [containerRef, isVisible] = useIntersect({
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  });
+
   return (
     <section className='section-constat'>
-      <article className='constat-title'>
-        <h2 className='bold'>notre constat</h2>
+      <article className='constat-title ' ref={containerRef}>
+        <h2 className={isVisible ? 'bold slide-top active' : 'bold slide-top'}>
+          notre constat
+        </h2>
       </article>
       <article className='constat-content'>
         <div className='hand-img-container'>

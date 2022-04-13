@@ -120,6 +120,10 @@ ul {
   color: var(--red);
 }
 
+section {
+  overflow: hidden;
+}
+
 /* ? BUTTONS */
 
 .btn {
