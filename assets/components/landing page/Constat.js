@@ -1,9 +1,101 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Constat = () => {
+  const slideInRight = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        x: 50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInLeft = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        x: -50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInBottom = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInTop = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: -50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  useEffect(() => {
+    slideInTop('#constat-title');
+  }, []);
+
   return (
     <section className='section-constat'>
-      <article className='constat-title '>
+      <article id='constat-title' className='constat-title '>
         <h2 className='bold'>notre constat</h2>
       </article>
       <article className='constat-content'>

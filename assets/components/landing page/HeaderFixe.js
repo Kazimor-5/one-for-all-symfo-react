@@ -11,7 +11,7 @@ const HeaderFixe = () => {
       elem,
       {
         opacity: 0,
-        x: 100,
+        x: 50,
       },
       {
         opacity: 1,

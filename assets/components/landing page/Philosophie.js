@@ -11,7 +11,7 @@ const Philosophie = () => {
       elem,
       {
         opacity: 0,
-        x: 100,
+        x: 50,
       },
       {
         opacity: 1,
@@ -32,7 +32,7 @@ const Philosophie = () => {
       elem,
       {
         opacity: 0,
-        x: -100,
+        x: -50,
       },
       {
         opacity: 1,
@@ -53,7 +53,7 @@ const Philosophie = () => {
       elem,
       {
         opacity: 0,
-        y: 100,
+        y: 50,
       },
       {
         opacity: 1,
@@ -74,7 +74,7 @@ const Philosophie = () => {
       elem,
       {
         opacity: 0,
-        y: -100,
+        y: -50,
       },
       {
         opacity: 1,

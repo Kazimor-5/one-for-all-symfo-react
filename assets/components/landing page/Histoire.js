@@ -10,7 +10,7 @@ const Histoire = () => {
       elem,
       {
         opacity: 0,
-        x: 100,
+        x: 50,
       },
       {
         opacity: 1,
@@ -31,7 +31,7 @@ const Histoire = () => {
       elem,
       {
         opacity: 0,
-        x: -100,
+        x: -50,
       },
       {
         opacity: 1,
@@ -52,7 +52,7 @@ const Histoire = () => {
       elem,
       {
         opacity: 0,
-        y: 100,
+        y: 50,
       },
       {
         opacity: 1,
@@ -73,7 +73,7 @@ const Histoire = () => {
       elem,
       {
         opacity: 0,
-        y: -100,
+        y: -50,
       },
       {
         opacity: 1,
@@ -89,9 +89,44 @@ const Histoire = () => {
     );
   };
 
+  useEffect(() => {
+    slideInTop('#histoire-title-container');
+  }, []);
+
+  useEffect(() => {
+    slideInLeft('#samurai-img-container');
+  }, []);
+
+  useEffect(() => {
+    slideInRight('#samurai-text');
+  }, []);
+
+  useEffect(() => {
+    slideInTop('#hope-img-container');
+  }, []);
+
+  useEffect(() => {
+    slideInLeft('#hope-text');
+  }, []);
+
+  useEffect(() => {
+    slideInBottom('#soleil-img-container');
+  }, []);
+
+  useEffect(() => {
+    slideInRight('#histoire-text');
+  }, []);
+
+  useEffect(() => {
+    slideInBottom('#red');
+  }, []);
+
   return (
     <section className='section-histoire'>
-      <article className='histoire-title-container'>
+      <article
+        id='histoire-title-container'
+        className='histoire-title-container'
+      >
         <img
           src='./assets/histoire/titre.png'
           alt='histoire du mouvement'
@@ -99,14 +134,14 @@ const Histoire = () => {
         />
       </article>
       <article className='samurai-container'>
-        <div className='samurai-img-container'>
+        <div id='samurai-img-container' className='samurai-img-container'>
           <img
             src='./assets/histoire/samurai.png'
             alt='samurai'
             className='img samurai-img'
           />
         </div>
-        <div className='samurai-text'>
+        <div id='samurai-text' className='samurai-text'>
           <p>
             Il y a <span className='one4all-font red'>30 ans</span>, un élève de
             CP à l’école du Mandinet en Île-de-France, exprimait devant sa
@@ -121,29 +156,31 @@ const Histoire = () => {
         </div>
       </article>
       <article className='hope'>
-        <div className='hope-img-container'>
+        <div id='hope-img-container' className='hope-img-container'>
           <img
             src='./assets/histoire/parchemin copie.png'
             alt='hope'
             className='img'
           />
         </div>
-        <div className='hope-text'>
-          <div className='soleil-img-container'>
+        <div id='hope-text' className='hope-text'>
+          <div id='soleil-img-container' className='soleil-img-container'>
             <img
               src='assets/histoire/soleil rouge.png'
               alt='soleil rouge'
               className='img'
             />
           </div>
-          <p>
+          <p id='histoire-text'>
             ...commence à fédérer les citoyens du monde et plus particulièrement
             les jeunes pour mettre en oeuvre son plan d'action à l'échelle
             planétaire. Cet illuminé réaliste, c’est Don Vebole, venez découvrir
             son histoire et son projet humanitaire au travers du Mouvement{' '}
             <span className='one4all-font red'>#One4All</span> ...
           </p>
-          <button className='btn btn-red'>Découvrir</button>
+          <button id='red' className='btn btn-red'>
+            Découvrir
+          </button>
         </div>
       </article>
     </section>
