@@ -1,49 +1,112 @@
-import React from 'react';
-import useIntersect from './useIntersect';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Histoire = () => {
-  const [containerRef, isVisible] = useIntersect({
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1,
-  });
+  const slideInRight = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        x: 100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInLeft = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        x: -100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInBottom = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInTop = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: -100,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
 
   return (
-    <section className='section-histoire' ref={containerRef}>
-      <article
-        className={
-          isVisible
-            ? 'histoire-title-container slide-top active'
-            : 'histoire-title-container slide-top'
-        }
-      >
+    <section className='section-histoire'>
+      <article className='histoire-title-container'>
         <img
           src='./assets/histoire/titre.png'
           alt='histoire du mouvement'
           className='img'
         />
       </article>
-      <article className='samurai-container' ref={containerRef}>
-        <div
-          className={
-            isVisible
-              ? 'samurai-img-container slide-left active'
-              : 'samurai-img-container slide-left'
-          }
-        >
+      <article className='samurai-container'>
+        <div className='samurai-img-container'>
           <img
             src='./assets/histoire/samurai.png'
             alt='samurai'
             className='img samurai-img'
           />
         </div>
-        <div
-          className={
-            isVisible
-              ? 'samurai-text slide-right active'
-              : 'samurai-text slide-right active'
-          }
-        >
+        <div className='samurai-text'>
           <p>
             Il y a <span className='one4all-font red'>30 ans</span>, un élève de
             CP à l’école du Mandinet en Île-de-France, exprimait devant sa
@@ -57,50 +120,30 @@ const Histoire = () => {
           </p>
         </div>
       </article>
-      <article className='hope' ref={containerRef}>
-        <div
-          className={
-            isVisible
-              ? 'hope-img-container slide-top active'
-              : 'hope-img-container slide-top'
-          }
-        >
+      <article className='hope'>
+        <div className='hope-img-container'>
           <img
             src='./assets/histoire/parchemin copie.png'
             alt='hope'
             className='img'
           />
         </div>
-        <div className='hope-text' ref={containerRef}>
-          <div
-            className={
-              isVisible
-                ? 'soleil-img-container slide-left active'
-                : 'soleil-img-container slide-left'
-            }
-          >
+        <div className='hope-text'>
+          <div className='soleil-img-container'>
             <img
               src='assets/histoire/soleil rouge.png'
               alt='soleil rouge'
               className='img'
             />
           </div>
-          <p className={isVisible ? 'slide-right active' : 'slide-right'}>
+          <p>
             ...commence à fédérer les citoyens du monde et plus particulièrement
             les jeunes pour mettre en oeuvre son plan d'action à l'échelle
             planétaire. Cet illuminé réaliste, c’est Don Vebole, venez découvrir
             son histoire et son projet humanitaire au travers du Mouvement{' '}
             <span className='one4all-font red'>#One4All</span> ...
           </p>
-          <button
-            className={
-              isVisible
-                ? 'btn btn-red slide-bottom active'
-                : 'btn btn-red slide-bottom'
-            }
-          >
-            Découvrir
-          </button>
+          <button className='btn btn-red'>Découvrir</button>
         </div>
       </article>
     </section>

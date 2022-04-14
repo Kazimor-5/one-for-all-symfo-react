@@ -1,41 +1,53 @@
 // ! FILES
-import React from 'react';
-import useIntersect from './useIntersect';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HeaderFixe = () => {
-  const [containerRef, isVisible] = useIntersect({
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1,
-  });
+  const slideInRight = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        x: 100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: duration || 0.3,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top center',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  useEffect(() => {
+    slideInRight('#logo-fleur');
+  }, []);
+
+  useEffect(() => {
+    slideInRight('#text-container');
+  }, []);
 
   return (
     <section className='header-fixe'>
-      <article className='background' ref={containerRef}>
+      <article className='background'>
         <img
           src='./assets/header/logocolor.png'
           alt='logo-fleur'
-          className={
-            isVisible
-              ? 'img logo-fleur slide-right active'
-              : 'img logo-fleur slide-right'
-          }
+          id='logo-fleur'
+          className='img logo-fleur'
         />
-        <div
-          className={
-            isVisible
-              ? 'text-container slide-right active'
-              : 'text-container slide-right'
-          }
-        >
-          <img
-            src='./assets/header/logo.png'
-            alt='logo-fleur'
-            className='img'
-          />
+        <div id='text-container' className='text-container '>
+          <img src='./assets/header/logo.png' alt='logo' className='img' />
           <img
             src='./assets/header/logoTextNoir.png'
-            alt='logo-fleur'
+            alt='texte'
             className='img text-noir'
           />
         </div>
