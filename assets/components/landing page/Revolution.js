@@ -106,6 +106,10 @@ const Revolution = () => {
   }, []);
 
   useEffect(() => {
+    slideInRight('#revolution-img-container');
+  });
+
+  useEffect(() => {
     slideInTop('#ambition-title');
   }, []);
 
@@ -151,6 +155,13 @@ const Revolution = () => {
             <span className='purple bold'>la solidarité</span> est la seule
             issue au destin funeste qui menace notre civilisation.
           </p>
+        </div>
+        <div id='revolution-img-container' className='revolution-img-container'>
+          <img
+            src='./assets/revolution/Slide-revolution.png'
+            alt='notre révolution'
+            className='img'
+          />
         </div>
       </article>
       <article className='article-ambition'>

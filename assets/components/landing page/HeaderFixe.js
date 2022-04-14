@@ -44,7 +44,11 @@ const HeaderFixe = () => {
           className='img logo-fleur'
         />
         <div id='text-container' className='text-container '>
-          <img src='./assets/header/logo.png' alt='logo' className='img' />
+          <img
+            src='./assets/header/logo.png'
+            alt='logo'
+            className='img main-logo'
+          />
           <img
             src='./assets/header/logoTextNoir.png'
             alt='texte'

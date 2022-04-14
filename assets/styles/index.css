@@ -120,6 +120,11 @@ ul {
   color: var(--red);
 }
 
+section,
+article {
+  overflow: hidden;
+}
+
 /* ? BUTTONS */
 
 .btn {
@@ -182,8 +187,6 @@ ul {
   z-index: 999;
   transform: translate(-100%);
   transition: var(--transition);
-  border-bottom-left-radius: 1.875rem;
-  border-bottom-right-radius: 1.875rem;
 }
 
 .nav-btn {
@@ -323,6 +326,10 @@ ul {
   width: 70%;
 }
 
+.main-logo {
+  width: 80%;
+}
+
 .text-noir {
   filter: invert(100%);
 }
@@ -368,6 +375,13 @@ ul {
 
 .img-fleur {
   width: 40%;
+}
+
+.domaines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .domaines p {
@@ -524,6 +538,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  row-gap: 1.5rem;
   width: 90%;
 }
 
@@ -581,6 +596,7 @@ ul {
 
 /* ! CONSTAT */
 .section-constat {
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -647,6 +663,14 @@ ul {
 .revolution-content,
 .article-ambition {
   padding: 1rem;
+}
+
+.revolution-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
 }
 
 .article-ambition {
@@ -879,12 +903,29 @@ ul {
   padding: 1.5rem;
 }
 
+.communaute-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .communaute {
   text-transform: uppercase;
   font-size: 0.95rem;
 }
 
+.communaute-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+  text-align: center;
+}
+
 .communaute-links {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1189,7 +1230,7 @@ ul {
 .contact-cell {
   width: 90%;
   padding: 1rem;
-  background-color: var(--white);
+  background-color: #f3effe;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-2);
   display: flex;
@@ -1197,6 +1238,11 @@ ul {
   align-items: center;
   justify-content: space-around;
   row-gap: 1.5rem;
+}
+
+.contact-cell p {
+  color: var(--primary-purple);
+  font-weight: 600;
 }
 
 .btn-grid {
@@ -1263,29 +1309,41 @@ ul {
   border-radius: 50%;
   border: 3px solid var(--white);
   background: var(--white);
-  color: var(--black);
   padding: 0.5rem;
   transition: var(--transition);
   position: relative;
 }
 
-.fb::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+.follow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--white);
   transition: var(--transition);
+}
+
+.follow-anchor.ytb {
+  background-color: #ff0000;
+}
+
+.follow-anchor.fb {
   background: linear-gradient(#08c8fe, #0f70fd);
 }
 
-.follow-icon {
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  font-size: 2rem;
+.follow-anchor.insta {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.follow-anchor:hover .follow-icon {
+  transform: rotate(360deg);
 }
 
 .btn-up {
@@ -1305,4 +1363,316 @@ ul {
 .btn-up:hover {
   background: none;
   box-shadow: var(--shadow-4);
+}
+
+/* ! MEDIAQUERIES */
+
+@media screen and (min-width: 375px) {
+  /* MOUVEMENT */
+  .title-mouvement::after {
+    width: 88%;
+  }
+  /* JE SUIS ONE4ALL */
+  .challenge-title::after {
+    width: 60%;
+  }
+  /* EVENEMENT */
+  .evenement-title > h2::after {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  /* MOUVEMENT */
+  .title-mouvement::after {
+    width: 78%;
+  }
+  /* JE SUIS ONE4ALL */
+  .challenge-title::after {
+    width: 100%;
+  }
+  /* EVENEMENT */
+  .evenement-title > h2::after {
+    width: 72%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* NAVBAR */
+  .nav-links {
+    width: 50%;
+  }
+  /* HEADER FIXE */
+  .background {
+    height: 100vh;
+  }
+  .logo-fleur,
+  .text-container {
+    margin-bottom: 10rem;
+  }
+  /* MOUVEMENT */
+  .title-mouvement::after {
+    width: 100%;
+  }
+  .img-fleur {
+    width: 30%;
+  }
+  #domains {
+    width: 50%;
+  }
+  /* FONCTIONNEMENT */
+  .banner-img-container {
+    width: 60%;
+  }
+  .fonctionnement-img-container {
+    width: 65%;
+  }
+  /* PHILO */
+  .gandhi-img-container {
+    width: 65%;
+  }
+  .founder-img-container {
+    width: 65%;
+  }
+  /* HISTOIRE */
+  .histoire-title-container {
+    width: 65%;
+  }
+  .samurai-img-container {
+    width: 50%;
+  }
+  .hope-img-container {
+    width: 70%;
+  }
+  .soleil-img-container {
+    width: 40%;
+  }
+  /* SOUTIENS */
+  .ligue-img-container {
+    width: 40%;
+  }
+  /* RESEAU */
+  .reseau-title {
+    width: 65%;
+  }
+  .earth-container {
+    width: 45%;
+  }
+  .compteur,
+  .container-losange {
+    width: 60%;
+  }
+  /* COMMUNAUTE */
+  .communaute-title {
+    width: 40%;
+  }
+  .communaute-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  #cell-1 {
+    transform: rotate(-2deg);
+  }
+  #cell-2 {
+    transform: rotate(3deg);
+  }
+  #cell-3 {
+    transform: rotate(-3deg);
+  }
+  #cell-4 {
+    transform: rotate(2deg);
+  }
+  /* NEWS */
+  .news-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .card {
+    justify-content: space-between;
+  }
+  .logo-container {
+    margin-top: -3.85rem;
+  }
+  /* EVENEMENT */
+  .evenement-title > h2::after {
+    width: 74%;
+  }
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  /* FOOTER */
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .copyright,
+  .propos,
+  .follow,
+  .menu {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* NAVBAR */
+  .nav-links {
+    width: 30%;
+  }
+  /* HEADER FIXE */
+  .logo-fleur,
+  .text-container {
+    margin-bottom: 12rem;
+  }
+  /* MOUVEMENT */
+  .content {
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+  .img-fleur {
+    width: 55%;
+  }
+  .domaines {
+    justify-content: space-evenly;
+  }
+  #domains {
+    width: 85%;
+  }
+  /* PHILO */
+  .gandhi-img-container {
+    width: 50%;
+  }
+  .founder {
+    flex-direction: row;
+  }
+  /* HISTOIRE */
+  .samurai-container {
+    flex-direction: row;
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .samurai-img-container {
+    width: 30%;
+  }
+  .samurai-text {
+    width: 50%;
+  }
+  .hope {
+    flex-direction: row;
+  }
+  /* CONSTAT */
+  .constat-content {
+    flex-direction: row;
+    column-gap: 1.5rem;
+  }
+  /* REVOLUTION */
+  .revolution-content {
+    flex-direction: row;
+    column-gap: 1.5rem;
+  }
+  .revolution-text {
+    width: 50%;
+  }
+  .revolution-img-container {
+    width: 55%;
+  }
+  /* SOUTIENS */
+  .section-soutiens {
+    flex-direction: row;
+  }
+  .top {
+    padding-bottom: 1.5rem;
+  }
+  /* RESEAU */
+  .reseau-title {
+    width: 50%;
+  }
+  .reseau-content {
+    flex-direction: row;
+  }
+  .compteur,
+  .container-losange {
+    width: 100%;
+  }
+  .container-losange {
+    flex-direction: row;
+  }
+  /* COMMUNAUTE */
+  .section-communaute {
+    flex-direction: row;
+    column-gap: 1.5rem;
+  }
+  .communaute-title {
+    width: 60%;
+  }
+  .communaute-links {
+    flex-direction: row;
+  }
+  .communaute-link {
+    width: 90%;
+  }
+  .communaute-grid {
+    width: 50%;
+  }
+  /* JE SUIS ONE4ALL */
+  .challenge-content {
+    flex-direction: row;
+    column-gap: 1.5rem;
+  }
+  /* NEWS */
+  .news-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #ytb-1 {
+    order: 1;
+  }
+  #insta-1 {
+    order: 2;
+  }
+  #facebook-1 {
+    order: 3;
+  }
+  #ytb-2 {
+    order: 4;
+  }
+  #insta-2 {
+    order: 5;
+  }
+  #facebook-2 {
+    order: 6;
+  }
+  /* EVENEMENT */
+  .evenement-title > h2::after {
+    width: 54%;
+  }
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* NAVBAR */
+  .nav-links {
+    flex-direction: row;
+    transform: translate(0);
+    width: 100%;
+    height: initial;
+    position: initial;
+    box-shadow: none;
+    border-bottom-left-radius: 1.875rem;
+    border-bottom-right-radius: 1.875rem;
+  }
+  .open-sidebar-btn,
+  .close-sidebar-btn {
+    display: none;
+  }
 }

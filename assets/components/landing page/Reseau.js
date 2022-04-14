@@ -132,7 +132,7 @@ const Reseau = () => {
             <span className='one4all-font purple bold'>#One4All</span> à pour
             objectif de{' '}
             <span className='purple bold'>s'implanter dans 165 pays</span> afin
-            de développer le système ALtruiste à l'échelle planétaire
+            de développer le système Altruiste à l'échelle planétaire
           </p>
           <p id='increase' className='increase'>
             <span className='one4all-font purple bold'>#One4All</span> dans le
@@ -171,10 +171,10 @@ const Reseau = () => {
             </div>
             {/* fin losange container */}
           </article>
+          <button id='btn-blue' className='btn blue'>
+            adhérer / rejoindre
+          </button>
         </div>
-        <button id='btn-blue' className='btn blue'>
-          adhérer / rejoindre
-        </button>
       </article>
     </section>
   );

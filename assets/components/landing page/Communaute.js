@@ -133,14 +133,14 @@ const Communaute = () => {
 
   return (
     <section className='section-communaute'>
-      <article id='communaute-title' className='communaute-title'>
-        <img
-          src='./assets/reseau/une_communaute_inter.png'
-          alt='communauté titre'
-          className='img'
-        />
-      </article>
       <article className='communaute-content'>
+        <div id='communaute-title' className='communaute-title'>
+          <img
+            src='./assets/reseau/une_communaute_inter.png'
+            alt='communauté titre'
+            className='img'
+          />
+        </div>
         <div className='communaute-text'>
           <p id='communaute' className='communaute purple bold'>
             rejoins notre communauté !
@@ -160,9 +160,11 @@ const Communaute = () => {
           </p>
         </div>
         <div id='communaute-links' className='communaute-links'>
-          <p>rejoins la communauté</p>
-          <p>&amp;</p>
-          <p>change le monde</p>
+          <div className='communaute-link'>
+            <p>rejoins la communauté</p>
+            <p>&amp;</p>
+            <p>change le monde</p>
+          </div>
           <ul className='social-links'>
             {socialLinks.map((link) => {
               const { id, src, anchor } = link;
