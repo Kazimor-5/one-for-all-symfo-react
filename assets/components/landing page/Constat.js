@@ -93,17 +93,37 @@ const Constat = () => {
     slideInTop('#constat-title');
   }, []);
 
+  useEffect(() => {
+    slideInRight('#hand-img-container');
+  }, []);
+
+  useEffect(() => {
+    slideInLeft('#constat-text');
+  }, []);
+
+  useEffect(() => {
+    slideInRight('#constat-text-part-1');
+  }, []);
+
+  useEffect(() => {
+    slideInLeft('#constat-text-part-2');
+  }, []);
+
+  useEffect(() => {
+    slideInRight('#constat-text-part-3');
+  }, []);
+
   return (
     <section className='section-constat'>
       <article id='constat-title' className='constat-title '>
         <h2 className='bold'>notre constat</h2>
       </article>
       <article className='constat-content'>
-        <div className='hand-img-container'>
+        <div id='hand-img-container' className='hand-img-container'>
           <img src='./assets/constat/imaneConstat.png' alt='' className='img' />
         </div>
-        <div className='constat-text'>
-          <p>
+        <div id='constat-text' className='constat-text'>
+          <p id='constat-text-part-1'>
             <span className='purple bold'>La crise du Covid-19</span> a révélé
             les failles de notre système mondial à réagir face à une crise
             sanitaire d'ampleur internationale. Les gouvernements ont montré
@@ -111,13 +131,13 @@ const Constat = () => {
             efficaces. Chaque pays se comparant pour évaluer sa gestion de la
             crise.
           </p>
-          <p>
+          <p id='constat-text-part-2'>
             <span className='purple bold'>Le conflit en Ukraine</span> est un
             autre témoignage de l'incapacité des organisations mondiales à
             maintenir la paix du fait de leurs interdépendances économiques. Ce
             modèle sociètale pour l'Humanité est menacé.
           </p>
-          <p>
+          <p id='constat-text-part-3'>
             Il semble aujourd'hui plus que nécessaire de proposer une autre
             voie, plus respectueuse des êtres qui peuplent la Terre grâce à un{' '}
             <span className='purple bold'>Altruisme mondial</span>, sans

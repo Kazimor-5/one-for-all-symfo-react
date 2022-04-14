@@ -1,20 +1,140 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Revolution = () => {
+  const slideInRight = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        x: 50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInLeft = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        x: -50,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInBottom = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  const slideInTop = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: -50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: duration || 0.3,
+        delay: delay || 0.4,
+        scrollTrigger: {
+          trigger: elem,
+          start: 'top bottom',
+          end: 'bottom center',
+        },
+      }
+    );
+  };
+
+  useEffect(() => {
+    slideInTop('#revolution-title');
+  }, []);
+
+  useEffect(() => {
+    slideInLeft('#revolution-text-part-1');
+  }, []);
+
+  useEffect(() => {
+    slideInRight('#revolution-text-part-2');
+  }, []);
+
+  useEffect(() => {
+    slideInLeft('#revolution-text-part-3');
+  }, []);
+
+  useEffect(() => {
+    slideInTop('#ambition-title');
+  }, []);
+
+  useEffect(() => {
+    slideInRight('#ambition-text');
+  }, []);
+
+  useEffect(() => {
+    slideInLeft('#map-img-container');
+  }, []);
+
+  useEffect(() => {
+    slideInBottom('#revolution-btn');
+  }, []);
+
   return (
     <section className='section-revolution'>
-      <article className='revolution-title'>
+      <article id='revolution-title' className='revolution-title'>
         <h2 className='bold'>notre révolution</h2>
       </article>
       <article className='revolution-content'>
         <div className='revolution-text'>
-          <p>
+          <p id='revolution-text-part-1'>
             <span className='purple bold'>Le déséquilibre mondial</span> que
             nous connaissons est inédit dans les chroniques de l'Humanité.
             Crises sanitaires, déréglements climatique, conflits sociaux et
             guerres.
           </p>
-          <p>
+          <p id='revolution-text-part-2'>
             Tous ces signes démontrent la fragiité de notre système économique
             et social qui se fonde sur{' '}
             <span className='purple bold'>
@@ -23,7 +143,7 @@ const Revolution = () => {
             par l'exploitation sans limites des ressources de notre planète,
             quelles soient humaines ou naturelles.
           </p>
-          <p>
+          <p id='revolution-text-part-3'>
             Ces évènements impactent l'intégralité de l'Humanité et paralysent
             tous les domaines à travers le monde. Les limites de système
             capitaliste actuel sont mis en lumière et prouvent qu'à l'heure ou
@@ -34,11 +154,11 @@ const Revolution = () => {
         </div>
       </article>
       <article className='article-ambition'>
-        <p className='bold'>
+        <p id='ambition-title' className='bold'>
           L'ambition du Mouvement{' '}
           <span className='one4all-font purple'>#One4All</span> est simple:
         </p>
-        <p>
+        <p id='ambition-text'>
           Créer{' '}
           <span className='purple bold'>
             un nouveau système Social et Économique
@@ -49,14 +169,16 @@ const Revolution = () => {
           </span>
           .
         </p>
-        <div className='map-img-container'>
+        <div id='map-img-container' className='map-img-container'>
           <img
             src='./assets/revolution/earth.png'
             alt='implantation de #One4All dans le monde'
             className='img'
           />
         </div>
-        <button className='btn'>notre révolution</button>
+        <button id='revolution-btn' className='btn'>
+          notre révolution
+        </button>
       </article>
     </section>
   );

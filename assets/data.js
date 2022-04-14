@@ -254,30 +254,32 @@ export const people = [
     id: 1,
     name: 'Italie',
     src: 'assets/reseau/Italia.jpg',
-    secondClass: 'cell-1',
+    idName: 'cell-1',
   },
   {
     id: 2,
     name: 'Los Angeles',
     src: 'assets/reseau/LA.jpg',
-    secondClass: 'cell-2',
+    idName: 'cell-2',
   },
   {
     id: 3,
     name: 'Tokyo',
     src: 'assets/reseau/Tokyo.jpg',
-    secondClass: 'cell-3',
+    idName: 'cell-3',
   },
   {
     id: 4,
     name: 'Beyrouth',
     src: 'assets/reseau/Beyrouth.jpg',
+    idName: 'cell-4',
   },
 ];
 
 export const news = [
   {
     id: 1,
+    idName: 'ytb-1',
     bgImage: './assets/news/minia_yt_1.png',
     logo: './assets/header/logocolor.png',
     title: '#One4all - Rejoignez-nous !',
@@ -290,6 +292,7 @@ export const news = [
   },
   {
     id: 2,
+    idName: 'ytb-2',
     bgImage: './assets/news/minia_yt_2.png',
     logo: './assets/header/logocolor.png',
     title: 'Matt Damon supporting #One4All and Don Vebole',
@@ -302,6 +305,7 @@ export const news = [
   },
   {
     id: 3,
+    idName: 'insta-1',
     bgImage: './assets/news/minia_insta_1.jpg',
     logo: './assets/header/logocolor.png',
     title: 'Une nouvelle mascotte pour #One4All !',
@@ -314,6 +318,7 @@ export const news = [
   },
   {
     id: 4,
+    idName: 'insta-2',
     bgImage: './assets/news/minia_insta_2.jpg',
     logo: './assets/header/logocolor.png',
     title: 'Gervinho supporting #One4All and Don Vebole',
@@ -326,6 +331,7 @@ export const news = [
   },
   {
     id: 5,
+    idName: 'facebook-1',
     bgImage: './assets/news/minia_insta_2.jpg',
     logo: './assets/header/logocolor.png',
     title: 'Journée mondial de la paix',
@@ -338,6 +344,7 @@ export const news = [
   },
   {
     id: 6,
+    idName: 'facebook-2',
     bgImage: './assets/news/minia_insta_2.jpg',
     logo: './assets/header/logocolor.png',
     title: 'Le mouvement altruiste #One4all',
