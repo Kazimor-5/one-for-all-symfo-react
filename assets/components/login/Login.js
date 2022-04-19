@@ -1,5 +1,5 @@
-import Styled from 'styled-components'
-import { mobile } from '../../../responsive'
+import Styled from 'styled-components';
+import { mobile } from '../../../responsive';
 
 const Container = Styled.div`
     width: 100vw;
@@ -8,27 +8,27 @@ const Container = Styled.div`
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;`
+    align-items: center;`;
 
 const Wrapper = Styled.div`
     padding: 20px;
     width: 25%;
     background: white;
-    ${mobile({width: "100%"})}`
+    ${mobile({ width: '100%' })}`;
 
 const Title = Styled.h1`
     font-size: 24px;
-    font-weight: bold;`
+    font-weight: bold;`;
 
 const Form = Styled.form`
     display: flex;
-    flex-direction: column;`
+    flex-direction: column;`;
 
 const Input = Styled.input`
     flex: 1;
     min-width: 40%;
     margin: 10px;
-    padding: 10px;`
+    padding: 10px;`;
 
 const Button = Styled.button`
     width: 100%;
@@ -39,31 +39,30 @@ const Button = Styled.button`
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    font-size: 16px;`
+    font-size: 16px;`;
 
 const Link = Styled.a`
     font-size: 12px;
     margin: 10px 0;
     text-decoration: underline;
     color: #00bcd4;
-    cursor: pointer;`
-
+    cursor: pointer;`;
 
 const Login = () => {
   return (
     <Container>
-        <Wrapper>
-            <Title>SE CONNECTER</Title>
-            <Form>
-                <Input type="text" placeholder="Nom utilisateur" />
-                <Input type="text" placeholder="Password" />
-                <Button>Connexion</Button>
-                <Link>VOUS AVEZ OUBLIE VOTRE MOT DE PASSE ?</Link>
-                <Link>Créer un nouveau mot de passe</Link>
-            </Form>
-        </Wrapper>
+      <Wrapper>
+        <Title>SE CONNECTER</Title>
+        <Form>
+          <Input type='text' placeholder='Nom utilisateur' />
+          <Input type='text' placeholder='Password' />
+          <Button>Connexion</Button>
+          <Link>VOUS AVEZ OUBLIÉ VOTRE MOT DE PASSE ?</Link>
+          <Link>Créer un nouveau mot de passe</Link>
+        </Form>
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

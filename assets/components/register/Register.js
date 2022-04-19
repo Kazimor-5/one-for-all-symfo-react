@@ -1,5 +1,5 @@
-import Styled from 'styled-components'
-import { mobile } from '../../../responsive'
+import Styled from 'styled-components';
+import { mobile } from '../../../responsive';
 
 const Container = Styled.div`
     width: 100vw;
@@ -8,31 +8,31 @@ const Container = Styled.div`
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;`
+    align-items: center;`;
 
 const Wrapper = Styled.div`
     padding: 20px;
     width: 40%;
     background: white;
-    ${mobile({width: "100%"})}`
+    ${mobile({ width: '100%' })}`;
 
 const Title = Styled.h1`
     font-size: 24px;
-    font-weight: bold;`
+    font-weight: bold;`;
 
 const Form = Styled.form`
     display: flex;
-    flex-wrap: wrap;`
+    flex-wrap: wrap;`;
 
 const Input = Styled.input`
     flex: 1;
     min-width: 40%;
     margin: 10px;
-    padding: 10px;`
+    padding: 10px;`;
 
 const Agreement = Styled.span`
     font-size: 12px;
-    margin: 10px 0;`
+    margin: 10px 0;`;
 
 const Button = Styled.button`
     width: 100%;
@@ -43,29 +43,36 @@ const Button = Styled.button`
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    font-size: 16px;`
+    font-size: 16px;`;
 
 const Register = () => {
   return (
     <Container>
-        <Wrapper>
-            <Title>Créer un compte</Title>
-            <Form>
-                <Input type="radio" name="sexe" value="homme">Monsieur</Input>
-                <Input type="radio" name="sexe" value="femme">Madame</Input>
-                <Input type="text" placeholder="Nom" />
-                <Input type="text" placeholder="Prénom" />
-                <Input type="date" placeholder="Date de naissance" />
-                <Input type="text" placeholder="Adresse" />
-                <Input type="email" placeholder="Email" />
-                <Input type="password" placeholder="Mot de passe" />
-                <Input type="password" placeholder="Confirmer mot de passe" />
-                <Agreement>En créant un compte, je consens au traitement de mes données personnelles conformément à la <b>POLITIQUE DE CONFIDENTIALITÉ</b>.</Agreement>
-                <Button>Créer un compte</Button>
-            </Form>
-        </Wrapper>
+      <Wrapper>
+        <Title>Créer un compte</Title>
+        <Form>
+          <Input type='radio' name='sexe' value='homme'>
+            Monsieur
+          </Input>
+          <Input type='radio' name='sexe' value='femme'>
+            Madame
+          </Input>
+          <Input type='text' placeholder='Nom' />
+          <Input type='text' placeholder='Prénom' />
+          <Input type='date' placeholder='Date de naissance' />
+          <Input type='text' placeholder='Adresse' />
+          <Input type='email' placeholder='Email' />
+          <Input type='password' placeholder='Mot de passe' />
+          <Input type='password' placeholder='Confirmer mot de passe' />
+          <Agreement>
+            En créant un compte, je consens au traitement de mes données
+            personnelles conformément à la <b>POLITIQUE DE CONFIDENTIALITÉ</b>.
+          </Agreement>
+          <Button>Créer un compte</Button>
+        </Form>
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
