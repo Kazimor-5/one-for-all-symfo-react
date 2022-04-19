@@ -17,6 +17,8 @@ const App = () => {
         {/* <Route path="/login" element={user ? <Navigate to="/" replace /> : <Login />} /> */}
         <Route path="/register" element={<Register />} />
         {/* <Route path="/register" element={user ? <Navigate to="/" replace /> : <Register />} /> */}
+        {/*route pour aller vers la page d'identification pour l'admin */}
+        <Route path="/admin/123456" element={<Admin />} />
       </Routes>
     </Router>
   );
