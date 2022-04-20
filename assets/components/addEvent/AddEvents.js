@@ -12,8 +12,10 @@ const AddEvents = () => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append('file', file);
-    formData.append('fileName', file.name);
+    formData.append('title', title);
+    // formData.append('file', file);
+    // formData.append('fileName', file.name);
+    formData.append('description', description);
     const config = {
       headers: {
         'content-type': 'multipart/form-data',
