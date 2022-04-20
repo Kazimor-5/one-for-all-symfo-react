@@ -153,8 +153,10 @@ ul {
   border-radius: var(--border-radius);
   background: var(--bg-color);
 }
-.motif:focus {
+.motif:focus,
+.motif:hover {
   outline: 1px solid var(--grey-300);
+  border-radius: var(--border-radius);
 }
 ::placeholder {
   font-family: inherit;

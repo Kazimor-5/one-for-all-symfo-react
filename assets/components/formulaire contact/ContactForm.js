@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
 
-const url = 'http://localhost:8000/api/contact';
+const url = 'http://localhost:8000/api/contacts';
 
 const ContactForm = () => {
   const [firstName, setFirstName] = useState('');
@@ -36,7 +36,7 @@ const ContactForm = () => {
         return [...item, message];
       });
 
-      await axios
+      axios
         .post(url, {
           message,
         })
