@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import axios from 'axios';
 
 const ContactForm = () => {
   const [firstName, setFirstName] = useState('');
@@ -8,6 +10,8 @@ const ContactForm = () => {
   const [object, setObject] = useState('');
   const [text, setText] = useState('');
   const [messages, setMessages] = useState([]);
+
+  const reCaptchaRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -117,6 +121,13 @@ const ContactForm = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
           ></textarea>
+        </div>
+        <div className='form-row'>
+          <ReCAPTCHA
+            ref={reCaptchaRef}
+            sitekey={process.env.PUBLIC_SITE_KEY}
+            id='captcha'
+          />
         </div>
         <button type='submit' className='btn btn-block'>
           Envoyer le message

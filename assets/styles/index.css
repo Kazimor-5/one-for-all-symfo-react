@@ -184,6 +184,11 @@ ul {
   width: 60%;
   border-radius: var(--border-radius);
 }
+#captcha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ? SPINNER */
 @keyframes spinner {
   to {

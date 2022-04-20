@@ -1,4 +1,5 @@
 const Encore = require('@symfony/webpack-encore');
+const dotenv = require('dotenv');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -20,6 +21,19 @@ Encore
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
+  // define the environment variables
+  .configureDefinePlugin((options) => {
+    const env = dotenv.config();
+
+    if (env.error) {
+      throw env.error;
+    }
+
+    options['process.env'].PUBLIC_SITE_KEY = JSON.stringify(
+      env.parsed.PUBLIC_SITE_KEY
+    );
+  })
+
   .addEntry('app', './assets/index.js')
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
