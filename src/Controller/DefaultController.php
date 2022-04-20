@@ -2,10 +2,15 @@
 
 namespace App\Controller;
 
+use App\Entity\Events;
 use App\Repository\CategoryRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Exception\NotEncodableValueException;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class DefaultController extends AbstractController
 {
@@ -17,13 +22,4 @@ class DefaultController extends AbstractController
         return $this->render('default/index.html.twig');
     }
 
-    /**
-     * @Route("/addEvent", name="addEvent")
-     */
-    public function addEvent(CategoryRepository $categoryRepository)
-    {
-        $categoryList = $categoryRepository->findAll();
-        dump($categoryList);
-        return $this->render('default/add_event.html.twig');
-    }
 }

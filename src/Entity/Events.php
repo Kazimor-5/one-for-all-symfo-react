@@ -17,11 +17,14 @@ class Events
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 255)]
-    private $name;
-
     #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'events')]
     private $categories;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $title;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $content;
 
     public function __construct()
     {
@@ -31,18 +34,6 @@ class Events
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
     }
 
     /**
@@ -65,6 +56,30 @@ class Events
     public function removeCategory(Category $category): self
     {
         $this->categories->removeElement($category);
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
 
         return $this;
     }
