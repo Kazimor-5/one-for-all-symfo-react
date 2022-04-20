@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
 
+const url = 'http://localhost:8000/api/contact';
+
 const ContactForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLasteName] = useState('');
@@ -13,8 +15,12 @@ const ContactForm = () => {
 
   const reCaptchaRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const token = await reCaptchaRef.current.executeAsync();
+
+    console.log('reCaptcha token:', token);
 
     if (firstName && lastName && email && motif && object && text) {
       const message = {
@@ -29,6 +35,14 @@ const ContactForm = () => {
       setMessages((item) => {
         return [...item, message];
       });
+
+      await axios
+        .post(url, {
+          message,
+        })
+        .then((response) => console.log(response))
+        .then((error) => console.log(error));
+
       setFirstName('');
       setLasteName('');
       setEmail('');
@@ -124,9 +138,10 @@ const ContactForm = () => {
         </div>
         <div className='form-row'>
           <ReCAPTCHA
-            ref={reCaptchaRef}
             sitekey={process.env.PUBLIC_SITE_KEY}
             id='captcha'
+            size='invisible'
+            ref={reCaptchaRef}
           />
         </div>
         <button type='submit' className='btn btn-block'>
