@@ -1,34 +1,37 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const url = 'http://localhost:8000/api/addEvent';
+const url = 'http://localhost:8000/api/events';
 
 const AddEvents = () => {
-  const [title, setTitle] = useState('');
-  const [file, setFile] = useState();
-  const [description, setDescription] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const formData = new FormData();
-    formData.append('title', title);
-    // formData.append('file', file);
-    // formData.append('fileName', file.name);
-    formData.append('description', description);
-    const config = {
-      headers: {
-        'content-type': 'multipart/form-data',
-      },
-    };
-    axios
-      .post(url, formData, config)
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
-  };
+  const [event, setEvent] = useState({
+    title: '',
+    description: '',
+  });
 
   const handleChange = (e) => {
-    setFile(e.target.files[0]);
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setEvent({ ...event, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(url, {
+        title: event.title,
+        content: event.description,
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.response);
+    }
+    setEvent({
+      title: '',
+      description: '',
+    });
   };
 
   return (
@@ -42,19 +45,9 @@ const AddEvents = () => {
           <input
             type='text'
             id='title'
+            name='title'
             className='form-input'
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </article>
-        <article className='form-row'>
-          <label htmlFor='file' className='form-label'>
-            Télecharger un fichier:
-          </label>
-          <input
-            type='file'
-            name='file'
-            id='file'
-            className='form-input'
+            value={event.title}
             onChange={handleChange}
           />
         </article>
@@ -66,7 +59,8 @@ const AddEvents = () => {
             name='description'
             id='description'
             className='form-textarea'
-            onChange={(e) => setDescription(e.target.value)}
+            value={event.description}
+            onChange={handleChange}
           ></textarea>
         </article>
         <button className='btn btn-block'>ajouter l'évènement</button>
