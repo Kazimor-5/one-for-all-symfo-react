@@ -5,51 +5,41 @@ import axios from 'axios';
 const url = 'http://localhost:8000/api/contacts';
 
 const ContactForm = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLasteName] = useState('');
-  const [email, setEmail] = useState('');
-  const [motif, setMotif] = useState('');
-  const [object, setObject] = useState('');
-  const [text, setText] = useState('');
-  const [messages, setMessages] = useState([]);
+  const [data, setData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    object: '',
+    text: '',
+  });
 
   const reCaptchaRef = useRef(null);
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setData({ ...data, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const token = await reCaptchaRef.current.executeAsync();
+    const token = reCaptchaRef.current.executeAsync();
 
-    console.log('reCaptcha token:', token);
-
-    if (firstName && lastName && email && motif && object && text) {
-      const message = {
-        id: new Date().getTime().toString(),
-        firstName,
-        lastName,
-        email,
-        motif,
-        object,
-        text,
-      };
-      setMessages((item) => {
-        return [...item, message];
+    try {
+      const response = await axios.post(url, {
+        name: data.lastName,
+        firstname: data.firstName,
+        mail: data.email,
+        objet: data.object,
+        message: data.text,
       });
-
-      axios
-        .post(url, {
-          message,
-        })
-        .then((response) => console.log(response))
-        .then((error) => console.log(error));
-
-      setFirstName('');
-      setLasteName('');
-      setEmail('');
-      setMotif('');
-      setObject('');
-      setText('');
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.response);
     }
+    setData({ firstName: '', lastName: '', email: '', object: '', text: '' });
   };
 
   return (
@@ -64,10 +54,11 @@ const ContactForm = () => {
             required
             type='text'
             id='firstname'
+            name='firstName'
             className='form-input'
             placeholder='Prénom'
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+            value={data.firstName}
+            onChange={handleChange}
           />
         </div>
         <div className='form-row'>
@@ -79,9 +70,10 @@ const ContactForm = () => {
             type='text'
             className='form-input'
             id='lastName'
+            name='lastName'
             placeholder='Nom'
-            value={lastName}
-            onChange={(e) => setLasteName(e.target.value)}
+            value={data.lastName}
+            onChange={handleChange}
           />
         </div>
         <div className='form-row'>
@@ -92,48 +84,40 @@ const ContactForm = () => {
             required
             type='email'
             id='email'
+            name='email'
             className='form-input'
             placeholder='Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={data.email}
+            onChange={handleChange}
           />
         </div>
         <div className='form-row'>
-          <label htmlFor='motif' className='form-label'>
-            Motif
+          <label htmlFor='object' className='form-label'>
+            Objet du messsage:
           </label>
-          <select
-            required
-            name='motif'
-            id='motif'
-            className='motif'
-            value={motif}
-            onChange={(e) => setMotif(e.target.value)}
-          >
-            <option value=''>Choisir un motif de message</option>
-            <option value='relation de presse'>Relation de presse</option>
-            <option value='recrutement'>Recrutement</option>
-          </select>
-        </div>
-        <div className='form-row'>
-          <label htmlFor='objet' className='form-label'></label>
           <input
+            required
             type='text'
-            id='objet'
+            id='object'
+            name='object'
             placeholder='Objet du message'
-            value={object}
-            onChange={(e) => setObject(e.target.value)}
+            value={data.object}
+            onChange={handleChange}
             className='form-input'
           />
         </div>
         <div className='form-row'>
+          <label htmlFor='text' className='form-label'>
+            Message:
+          </label>
           <textarea
-            name=''
-            id=''
+            required
+            name='text'
+            id='text'
             className='form-textarea'
             placeholder='Entrez votre message ...'
-            value={text}
-            onChange={(e) => setText(e.target.value)}
+            value={data.text}
+            onChange={handleChange}
           ></textarea>
         </div>
         <div className='form-row'>
@@ -148,20 +132,6 @@ const ContactForm = () => {
           Envoyer le message
         </button>
       </form>
-      {messages.map((message) => {
-        const { id, firstName, lastName, email, motif, object, text } = message;
-
-        return (
-          <div key={id} className='item'>
-            <h4>Prénom: {firstName}</h4>
-            <h4>Nom: {lastName}</h4>
-            <p>Email: {email}</p>
-            <p>Motif: {motif}</p>
-            <p>Objet: {object}</p>
-            <p>Message: {text}</p>
-          </div>
-        );
-      })}
     </section>
   );
 };
