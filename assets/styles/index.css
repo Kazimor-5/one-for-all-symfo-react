@@ -1350,6 +1350,10 @@ article {
   background-color: var(--green-dark);
   color: var(--white);
 }
+.btn-check-green:hover {
+  background-color: var(--white);
+  color: var(--green-dark);
+}
 .striped {
   text-decoration: line-through;
 }
