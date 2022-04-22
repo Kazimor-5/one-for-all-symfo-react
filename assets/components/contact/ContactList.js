@@ -8,6 +8,7 @@ const url = 'http://localhost:8000/api/contacts/';
 const ContactList = () => {
   const [contacts, setContacts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
   const showContactList = async () => {
     setIsLoading(true);
@@ -29,6 +30,18 @@ const ContactList = () => {
     setContacts(newContacts);
   };
 
+  const handleCheck = async (id) => {
+    try {
+      const options = {
+        headers: { 'Content-Type': 'application/merge-patch+json' },
+      };
+      await axios.patch(`${url}${id}`, { view: true }, options);
+      setIsChecked(true);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
   useEffect(() => {
     showContactList();
   }, []);
@@ -43,24 +56,29 @@ const ContactList = () => {
 
   return (
     <section className='section-contactList'>
-      <h1 className='title'>Liste des messages</h1>
+      <h1 className='title' id='contact-title'>
+        Liste des messages
+      </h1>
       {contacts.length >= 1 ? (
         contacts.map((contact) => {
-          const { id, name, firstname, objet, message } = contact;
+          const { id, name, firstname, objet, message, view } = contact;
 
           return (
-            <article key={id} className='contact'>
+            <article
+              key={id}
+              className={view === true ? 'contact striped' : 'contact'}
+            >
               <p>
-                {name} {firstname}
+                Nom/Prénom: {name} {firstname}
               </p>
-              <p>{objet}</p>
-              <p>{message}</p>
+              <p>Objet: {objet}</p>
+              <p>Message: {message}</p>
               <div className='btn-container'>
                 <button
-                  className='btn btn-check'
-                  onClick={async () => {
-                    await axios.patch(`${url}${id}`, { view: true });
-                  }}
+                  className={
+                    view === true ? 'btn btn-check-green' : 'btn btn-check'
+                  }
+                  onClick={() => handleCheck(id)}
                 >
                   <FaRegCheckSquare />
                 </button>
@@ -75,7 +93,9 @@ const ContactList = () => {
           );
         })
       ) : (
-        <h3 className='title'>Il n'y a pas de messages</h3>
+        <h3 className='title' id='no-message'>
+          Il n'y a pas de messages
+        </h3>
       )}
     </section>
   );
