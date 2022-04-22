@@ -39,7 +39,7 @@ const Details = () => {
         Retourner aux évènements
       </Link>
       <article className='details'>
-        <h3 className='title'>{title}</h3>
+        <h1 className='title'>{title}</h1>
         <p>{content}</p>
       </article>
     </section>
