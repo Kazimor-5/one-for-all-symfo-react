@@ -28,14 +28,13 @@ const ContactForm = () => {
     const token = reCaptchaRef.current.executeAsync();
 
     try {
-      const response = await axios.post(url, {
+      await axios.post(url, {
         name: data.lastName,
         firstname: data.firstName,
         mail: data.email,
         objet: data.object,
         message: data.text,
       });
-      console.log(response.data);
     } catch (error) {
       console.log(error.response);
     }

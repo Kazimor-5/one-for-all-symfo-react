@@ -197,13 +197,19 @@ ul {
     transform: rotate(360deg);
   }
 }
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
 .loading {
   margin: 0 auto;
   width: 6rem;
   height: 6rem;
   border: 5px solid var(--grey-400);
   border-radius: 50%;
-  border-top-color: var(--primary-500);
+  border-top-color: var(--primary-purple);
   animation: spinner 0.6s linear infinite;
 }
 .one4all-font {
