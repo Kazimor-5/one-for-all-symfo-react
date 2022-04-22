@@ -8,7 +8,7 @@ const url = 'http://localhost:8000/api/contacts/';
 const ContactList = () => {
   const [contacts, setContacts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState();
 
   const showContactList = async () => {
     setIsLoading(true);
@@ -16,6 +16,7 @@ const ContactList = () => {
       const response = await axios.get(url);
       const data = response.data['hydra:member'];
       setContacts(data);
+      setIsChecked(data[0].view);
       setIsLoading(false);
     } catch (error) {
       console.log(error.response);
@@ -35,8 +36,8 @@ const ContactList = () => {
       const options = {
         headers: { 'Content-Type': 'application/merge-patch+json' },
       };
-      await axios.patch(`${url}${id}`, { view: true }, options);
-      setIsChecked(true);
+      setIsChecked(!isChecked);
+      await axios.patch(`${url}${id}`, { view: !isChecked }, options);
     } catch (error) {
       console.log(error.response);
     }
@@ -61,12 +62,12 @@ const ContactList = () => {
       </h1>
       {contacts.length >= 1 ? (
         contacts.map((contact) => {
-          const { id, name, firstname, objet, message, view } = contact;
+          const { id, name, firstname, objet, message } = contact;
 
           return (
             <article
               key={id}
-              className={view === true ? 'contact striped' : 'contact'}
+              className={isChecked ? 'contact striped' : 'contact'}
             >
               <p>
                 Nom/Prénom: {name} {firstname}
@@ -76,7 +77,7 @@ const ContactList = () => {
               <div className='btn-container'>
                 <button
                   className={
-                    view === true ? 'btn btn-check-green' : 'btn btn-check'
+                    isChecked ? 'btn btn-check-green' : 'btn btn-check'
                   }
                   onClick={() => handleCheck(id)}
                 >
