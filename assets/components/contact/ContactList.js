@@ -19,16 +19,22 @@ const ContactList = () => {
       setIsChecked(data[0].view);
       setIsLoading(false);
     } catch (error) {
+      console.log(error);
       console.log(error.response);
       setIsLoading(false);
     }
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`${url}${id}`);
+    try {
+      await axios.delete(`${url}${id}`);
 
-    const newContacts = contacts.filter((contact) => contact.id !== id);
-    setContacts(newContacts);
+      const newContacts = contacts.filter((contact) => contact.id !== id);
+      setContacts(newContacts);
+    } catch (error) {
+      console.log(error);
+      console.log(error.resposne);
+    }
   };
 
   const handleCheck = async (id) => {
@@ -39,6 +45,7 @@ const ContactList = () => {
       setIsChecked(!isChecked);
       await axios.patch(`${url}${id}`, { view: !isChecked }, options);
     } catch (error) {
+      console.log(error);
       console.log(error.response);
     }
   };

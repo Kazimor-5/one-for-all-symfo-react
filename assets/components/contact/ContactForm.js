@@ -36,6 +36,7 @@ const ContactForm = () => {
         message: data.text,
       });
     } catch (error) {
+      console.log(error);
       console.log(error.response);
     }
     setData({ firstName: '', lastName: '', email: '', object: '', text: '' });
