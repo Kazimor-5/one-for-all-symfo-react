@@ -1181,21 +1181,28 @@ article {
 .header-revolution img{
   max-width: 100%;
 }
+.page-revolution{
+  line-height: 30px;
+  word-spacing: 8px;
+}
 .page-revolution-content{
     flex-direction: column;
  width: 80%;
   display: flex;
-  margin: 0;
+  margin: auto;
   align-content: center;
   align-items: center;
-  
+  grid-area: content;
   justify-content: center;
   margin-top: -25px;
   padding-top: 30px;
    background-color : rgba(255, 255, 255,0.8); 
 }
 
-
+.wrap{
+  display: grid;
+  min-height:100vh;
+}
 .content-revolution1 p{
   margin-left: 50px;
   margin-top: 50px;
@@ -1277,10 +1284,6 @@ article {
   width: 30%;
  }
 
- .page-revolution{
-   line-height: 30px;
-   word-spacing: 8px;
- }
 
 /* ! MEDIAQUERIES */
 @media screen and (min-width: 375px) {
@@ -1296,6 +1299,11 @@ article {
   .evenement-title > h2::after {
     width: 85%;
   }
+  .content-revolution1{
+    display: flex;
+   flex-direction: column;
+   
+  }
 }
 @media screen and (min-width: 425px) {
   /* MOUVEMENT */
@@ -1309,6 +1317,11 @@ article {
   /* EVENEMENT */
   .evenement-title > h2::after {
     width: 72%;
+  }
+  .content-revolution1{
+    display: flex;
+   flex-direction: column;
+   
   }
 }
 @media screen and (min-width: 768px) {
@@ -1431,6 +1444,11 @@ article {
   .follow,
   .menu {
     width: 50%;
+  }
+  .content-revolution1{
+    display: flex;
+   flex-direction: column;
+   
   }
 }
 @media screen and (min-width: 1024px) {
