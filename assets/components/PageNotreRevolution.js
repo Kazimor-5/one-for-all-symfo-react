@@ -1,11 +1,11 @@
 import React from "react";
 import Footer from "./landing page/Footer";
-import Header from "./page notre revolution/Header";
+import NotreRevolution from "./page notre revolution/NotreRevolution"
 
 const PageNotreRevolution = () => {
     return (
         <>
-            <Header />
+            <NotreRevolution />
             <Footer />
         </>
         );

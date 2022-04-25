@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 
-const Header = () => {
+const NotreRevolution = () => {
     const myStyle={
         backgroundImage: 
         "url('./assets/revolution/fond-marche.jpg')",
@@ -104,4 +104,4 @@ const slideInTop = (elem, delay, duration) => {
     );
 }
 
-export default Header;
+export default NotreRevolution;
