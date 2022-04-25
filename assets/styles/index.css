@@ -1304,7 +1304,7 @@ article {
   display: grid;
   margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 150px 1fr;
   align-items: center;
   width: 90%;
 }
