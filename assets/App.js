@@ -1,11 +1,11 @@
 // !COMPONENTS
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
-import PageNotreRevolution from './components/PageNotreRevolution';
 // ! FILES
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NosActivitesCommerciales from './components/NosActivitesCommerciales';
 
 
 const App = () => {
@@ -14,7 +14,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route index element={<LandingPage />} />
-        <Route path='/revolution' element={<PageNotreRevolution /> } />
+        <Route path='/activitesCommerciales' element={<NosActivitesCommerciales /> } />
+        
       </Routes>
     </Router>
   );
