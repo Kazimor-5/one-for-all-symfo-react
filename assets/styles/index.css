@@ -1299,6 +1299,7 @@ article {
   .evenement-title > h2::after {
     width: 85%;
   }
+  /*page-revolution*/
   .content-revolution1{
     display: flex;
    flex-direction: column;
@@ -1318,6 +1319,7 @@ article {
   .evenement-title > h2::after {
     width: 72%;
   }
+  /*page-revolution*/
   .content-revolution1{
     display: flex;
    flex-direction: column;
@@ -1445,10 +1447,10 @@ article {
   .menu {
     width: 50%;
   }
+  /*page-revolution*/
   .content-revolution1{
     display: flex;
    flex-direction: column;
-   
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1596,6 +1598,14 @@ article {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }
+
+  /*PageNotreRevolution */
+  .content-revolution1{
+    display: flex;
+   flex-direction: row;
+    justify-content: space-around;
+   
+  }
 }
 @media screen and (min-width: 1440px) {
   /* NAVBAR */
@@ -1659,5 +1669,12 @@ article {
   /* EVENEMENT */
   .evenement-title > h2::after {
     width: 38%;
+  }
+
+  .content-revolution1{
+    display: flex;
+   flex-direction: row;
+    justify-content: space-around;
+   
   }
 }
