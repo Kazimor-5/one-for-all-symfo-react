@@ -35,6 +35,10 @@ html {
   --primary-purple: #6a55ea;
   --secondary-purple: #40338c;
   --red: #ce2127;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
   /* ? FONTS */
   --headingFont: 'Montserrat', sans-serif;
   --bodyFont: 'Montserrat', sans-serif;
@@ -1264,13 +1268,30 @@ article {
   background: none;
   box-shadow: var(--shadow-4);
 }
-/* ! SECTION GETEVENTS */
+/* ! ADDEVENT */
+.section-addEvent,
+.section-editEvent {
+  width: 90%;
+  margin: 0 auto;
+}
+/* ! GETEVENTS */
 .section-getEvent {
-  min-height: 100vh;
-  display: flex;
+  min-height: 80vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150px 1fr;
   align-items: flex-start;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  width: 90%;
+  padding: 1rem;
+  gap: 1rem;
+}
+.getEvent-title {
+  grid-column: 1/4;
+}
+.empty {
+  grid-column: 1/4;
+  grid-row: 2/3;
 }
 .singleEvent {
   display: flex;
@@ -1286,7 +1307,23 @@ article {
 .singleEvent:hover {
   box-shadow: var(--shadow-4);
 }
-/* ! SECTION-DETAILS */
+.btn-delete {
+  background-color: var(--red-light);
+  color: var(--red-dark);
+}
+.btn-delete:hover {
+  background-color: var(--red-dark);
+  color: var(--red-light);
+}
+.btn-edit {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+}
+.btn-edit:hover {
+  background-color: var(--green-dark);
+  color: var(--green-light);
+}
+/* ! DETAILS */
 .section-details {
   display: flex;
   flex-direction: column;

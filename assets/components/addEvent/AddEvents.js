@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const url = 'http://localhost:8000/api/events';
 
@@ -36,6 +37,9 @@ const AddEvents = () => {
 
   return (
     <section className='section-addEvent'>
+      <Link to='/getEvents' className='btn'>
+        retourner aux évènements
+      </Link>
       <form onSubmit={handleSubmit} className='form'>
         <h2 className='title'>ajouter un évènement</h2>
         <article className='form-row'>

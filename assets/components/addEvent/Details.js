@@ -1,6 +1,6 @@
 //  ! FILES
-import axios from 'axios';
 import React, { useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 
 const url = 'http://localhost:8000/api/events/';
