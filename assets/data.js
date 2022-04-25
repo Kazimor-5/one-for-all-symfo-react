@@ -404,3 +404,48 @@ export const follow = [
     anchor: 'https://www.youtube.com/channel/UCuaNm_aJfS8WSpH-oTUHQsg',
   },
 ];
+
+export const faq = [
+  {
+    id: 1,
+    question: 'Depuis combien de temps existe #One4All ?',
+    reponse: `<span class="one4all-font purple">#One4All</span> est une association officiellement créée en 2020 mais le projet  est l’aboutissement de plus de 30 années de réflexions et de travail initiés par Don Vebole et perpétués avec des bénévoles dont nous remercions aujourd’hui leur dévouement à notre cause.`,
+    dataId: 'time',
+  },
+  {
+    id: 2,
+    question: 'Quelles sont les missions déjà réalisées ?',
+    reponse: `<span class="one4all-font purple">#One4All</span> est aujourd’hui en phase de structuration jusqu’en 2023. Une structuration durable pour que les missions soient menées de A à Z par l’association. Une autonomie totale qui demande en amont un investissement financier, matériel et humain. Vos contributions permettront de forger cette phase de structuration essentielle à l’association.`,
+    dataId: 'missions',
+  },
+  {
+    id: 3,
+    question:
+      'Qui mènera les actions dans les différents domaines (humanitaire, animalier…) ?',
+    reponse: `Les équipes <span class="one4all-font purple">#One4All</span> mèneront de A à Z les missions sur place, sans l’ingérence d’organisations extérieures et afin de mener de véritables changements sans que s’immiscent des intérêts privés. Ces actions se réaliseront en totale transparence pour permettre à chacun (contributeur, participant, etc) de suivre les avancées de <span class="one4all-font purple">#One4All</span>.`,
+    dataId: 'actions',
+  },
+  {
+    id: 4,
+    question: 'Comment apporter mon soutien à #One4All ?',
+    reponse: `Votre soutien peut être multiple:
+    <ul>
+    <li>
+    – Vous pouvez à tout moment rejoindre la Team <span class="one4all-font purple">#One4All</span> et participer à la structuration et au développement de <span class="one4all-font purple">#One4All</span> ou encore décider de faire un don.
+    </li>
+    <li>
+    – Intéressez par la mode ? Achetez sur la boutique #ONE-IV-ALL California ou via la Market-place <span class="one4all-font purple">#One4All</span> Store est possible ! Devenez Consom’Acteur du changement tout en vous offrant des produits de qualité auprès de fournisseurs engagés.
+    </li>
+    <li>
+    – Vous pourrez également participer à nos événements: concerts, showcases, festivals, marches et collectes de dons.
+    </li>
+    <li>
+    – Vous êtes un professionnel ? Devenez distributeur de la marque #ONE-IV-ALL California,  partenaire professionnel du <span class="one4all-font purple">#One4All</span> Store et/ou du Défi FAMINE <span class="one4all-font purple">#One4All</span> !
+    </li>
+    <li>
+    – Vous pouvez tout simplement diffuser notre message autour de vous, nous suivre et partager notre engagement sur les réseaux sociaux !
+    </li>
+    </ul>`,
+    dataId: 'soutiens',
+  },
+];
