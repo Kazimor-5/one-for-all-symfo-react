@@ -21,12 +21,12 @@ const AddEvents = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(url, {
+      await axios.post(url, {
         title: event.title,
         content: event.description,
       });
-      console.log(response.data);
     } catch (error) {
+      console.log(error);
       console.log(error.response);
     }
     setEvent({

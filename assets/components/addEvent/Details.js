@@ -11,12 +11,17 @@ const Details = () => {
   const { id } = useParams();
 
   const getSingleEvent = useCallback(async () => {
-    setIsLoading(true);
-    const response = await axios.get(`${url}${id}`);
-    const { data } = response;
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${url}${id}`);
+      const { data } = response;
 
-    setSingleEvent(data);
-    setIsLoading(false);
+      setSingleEvent(data);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      console.log(error.response);
+    }
   }, [id]);
 
   useEffect(() => {

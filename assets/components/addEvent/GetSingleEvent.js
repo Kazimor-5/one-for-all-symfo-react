@@ -7,10 +7,15 @@ const url = 'http://localhost:8000/api/events/';
 
 const GetSingleEvent = ({ id, title, events, setEvents }) => {
   const handleDelete = async (id) => {
-    await axios.delete(`${url}${id}`);
+    try {
+      await axios.delete(`${url}${id}`);
 
-    const newEvent = events.filter((event) => event.id !== id);
-    setEvents(newEvent);
+      const newEvent = events.filter((event) => event.id !== id);
+      setEvents(newEvent);
+    } catch (error) {
+      console.log(error);
+      console.log(error.response);
+    }
   };
 
   return (

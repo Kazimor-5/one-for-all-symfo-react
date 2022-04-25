@@ -36,8 +36,8 @@ const EditEvent = () => {
       await axios.patch(`${url}${id}`, { title, content }, options);
       setTitle('');
       setContent('');
-      setAlert(true, 'évènement modifié', 'success');
     } catch (error) {
+      console.log(error);
       console.log(error.response);
     }
   };
