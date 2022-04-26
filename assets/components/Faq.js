@@ -4,11 +4,16 @@ import { faq } from '../data';
 import { FaChevronLeft } from 'react-icons/fa';
 
 const Faq = () => {
-  const [tabs, setTabs] = useState(faq);
   const [index, setIndex] = useState(0);
-  const [isShowed, setIsShowed] = useState(false);
 
-  const handleShow = () => {};
+  const handleShow = (id) => {
+    if (id === index) {
+      setIndex(0);
+    } else {
+      setIndex(0);
+      setIndex(id);
+    }
+  };
 
   return (
     <section className='section-faq'>
@@ -21,18 +26,18 @@ const Faq = () => {
       </article>
       <h2 className='title bold'>frequently asked questions</h2>
       <article className='question-grid'>
-        {tabs.map((tab) => {
+        {faq.map((tab) => {
           const { question, answer, id } = tab;
 
           return (
             <div key={id} className='question-block'>
               <div className='question'>
                 <p className='bold'>{question}</p>
-                <button className='btn' onClick={handleShow}>
-                  <FaChevronLeft />
+                <button className='btn' onClick={() => handleShow(id)}>
+                  <FaChevronLeft className={id === index ? 'rotate' : ''} />
                 </button>
               </div>
-              <div className='answer'>
+              <div className={id === index ? 'answer showed' : 'answer'}>
                 <p dangerouslySetInnerHTML={{ __html: answer }}></p>
               </div>
             </div>
