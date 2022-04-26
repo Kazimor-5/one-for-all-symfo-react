@@ -1181,6 +1181,9 @@ article {
 .header-activites-comm img{
   max-width: 100%;
 }
+.section-nos-activites-comm{
+  color: var(--white);
+}
 .page-revolution{
   line-height: 30px;
   word-spacing: 8px;
@@ -1205,15 +1208,47 @@ article {
 .activites-content1{
   display: flex;
  flex-direction: row;
-
- min-width: 150%;
+ width: 100%;
+ justify-content: space-around;
  align-items: center;
  align-content: center;
- justify-content: center;
+
 }
 
+.activites-content2{
+  display: flex;
+  flex-direction: column;
+}
+
+.image-logo-activites{
+  margin-left: 20%;
+}
+.paragraph-activite1 h2{
+  color: rgb(255, 140, 0);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 .paragraph-activite1{
-  
+  margin-right: 20%;
+  font-size: 1.4em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.paragraph-activite2{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px;
 }
 
 .image-titre-activite{
