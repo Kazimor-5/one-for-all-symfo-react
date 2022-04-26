@@ -1177,157 +1177,101 @@ article {
   box-shadow: var(--shadow-4);
 }
 
-/* page-activites-commerciales */
-.header-activites-comm img{
-  max-width: 100%;
-}
-.section-nos-activites-comm{
-  color: var(--white);
-}
-.page-revolution{
-  line-height: 30px;
-  word-spacing: 8px;
-}
-.wrap{
-  flex-direction: column;
-   display: flex;
-   margin: auto;
-   align-content: center;
-   align-items: center;
-   grid-area: content;
-   justify-content: center;
+/* page-mode-fonctionnement */
+.image-header-fonctionnement{
   min-width: 100%;
+}
+
+.image-store-slide{
+  z-index: 999;
+  position: relative;
+  margin-top: -500px;
+
+}
+
+.modeFonctionnement{
+  flex-direction: column;
   
 }
 
-.content-revolution1 p{
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
-.activites-content1{
-  display: flex;
- flex-direction: row;
- width: 100%;
- justify-content: space-around;
- align-items: center;
- align-content: center;
-
-}
-
-.activites-content2{
-  display: flex;
-  flex-direction: column;
-}
-
-.image-logo-activites{
-  margin-left: 20%;
-}
-.paragraph-activite1 h2{
-  color: rgb(255, 140, 0);
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-.paragraph-activite1{
-  margin-right: 20%;
-  font-size: 1.4em;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
-  font-style: italic;
-  color: var(--white);
-  margin-bottom: 30px;
-}
-.store-font-yellow{
+.model-economique-titres h3{
   color: rgba(205, 165, 63, 0.749);
   font-weight: bold;
+  width: 80%;
 }
-.store-font-noir{
+.fonctionnement-font-noir{
   color: var(--black);
   font-weight: bold;
 }
 
-.paragraph-activite2{
+.image-foctionnement2{
+ 
+  width: 800px;
+ 
+}
+.content-model{
   display: flex;
   align-content: center;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  margin: 0;
-  font-size:large;
   flex-direction: column;
-  padding-bottom: 30px;
-}
-
-.store{
   line-height: 30px;
-  font-size:large;
-  color: var(--grey-500);
 }
 
-.store-content1{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
+.model-economique-titres{
+  width: 60%;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-.store-content1 p{
-  margin-right: 10%;
-}
-.store-content1 .store-image-titre{
-  margin-left: 10%;
-  
-}
-.store-image-titre img{
-  width: 400px;
-}
-.store-content2-text2{
-  margin-top: -10px;
-}
-.store-content2{
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.store-content2-text {
-  line-height: 30px;
-  font-size:large;
-  font-weight: bold;
-  color: var(--black);
-  font-size: larger;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
-.paragraph-activite2 .btn a{
-  color: var(--white);
+  font-size: large;
 }
 
-.image-titre-activite{
+.model-economique-titres h3{
+  margin-top: 30px;
+}
+
+.content-structure h3{
+  font-size: 1.5em;
+  margin-top: 30px;
   display: flex;
-  text-align: center;
+ 
   align-content: center;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+}
+
+.section-structure .btn-soutenir{
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.section-structure{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.model-economique-titres h2, .section-structure h2{
   color: var(--secondary-purple);
-  margin-bottom: 50px;
+  font-weight: bold;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
- .page-revolution-content4 .btn{
-  margin-top: 15px;
+ .model-economique-text{
   
-  width: 30%;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: var(--black);
+  width: 60%;
  }
 
 
