@@ -1176,6 +1176,44 @@ article {
   background: none;
   box-shadow: var(--shadow-4);
 }
+/* ! FAQ */
+.section-faq {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+}
+.question-grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+}
+.question-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 0.75rem;
+}
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.answer {
+  width: 70%;
+}
 /* ! MEDIAQUERIES */
 @media screen and (min-width: 375px) {
   /* MOUVEMENT */
