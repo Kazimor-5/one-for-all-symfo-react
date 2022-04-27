@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { navLinks } from '../data';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import '../styles/normalize.css';
 import '../styles/index.css';
 
@@ -61,9 +62,9 @@ const Navbar = () => {
 
           return (
             <li key={id} className='nav-btn'>
-              <a href={anchor} className='nav-anchor'>
+              <Link className='nav-btn' to={`/${name}`}>
                 {name}
-              </a>
+              </Link>
             </li>
           );
         })}
