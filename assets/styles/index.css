@@ -1176,6 +1176,34 @@ article {
   background: none;
   box-shadow: var(--shadow-4);
 }
+/* ! PAGE PHILO */
+.section-pagePhilo {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.picture-list {
+  padding-top: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1rem;
+}
+.pagePhilo-ambition-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.fleurContainer {
+  margin: 1.5rem auto 0rem auto;
+  width: 60%;
+}
 /* ! MEDIAQUERIES */
 @media screen and (min-width: 375px) {
   /* MOUVEMENT */
