@@ -1178,20 +1178,52 @@ article {
 }
 
 /* page-mode-fonctionnement */
+.header-fonctionnement{
+
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
 .image-header-fonctionnement{
   min-width: 100%;
+  position: absolute;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-store-slide{
   z-index: 999;
   position: relative;
-  margin-top: -500px;
+  margin-top: 10%;
+ 
+  animation: rotation 0.8s ease-in reverse;
+  max-width: 100%;
+  
+}
 
+@keyframes rotation {
+  from { transform: translateX(0px) rotateY(0deg); }
+to { transform: translateX(0px) rotateY(360deg); }
+}
+
+.image-titre-fonctionnement{
+  margin-top:200px;
 }
 
 .modeFonctionnement{
   flex-direction: column;
   
+}
+
+.modeFonctionnement img{
+  max-width: 100%;
+}
+
+.image-foctionnement2 img{
+  max-width: 100%;
 }
 
 .model-economique-titres h3{
@@ -1218,6 +1250,42 @@ article {
   line-height: 30px;
 }
 
+.section-structure{
+  display: flex;
+  margin: auto;
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  line-height: 30px;
+  margin-top: 50px;
+}
+
+.structure-content1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  
+}
+
+.structure-content2 img{
+  padding: 20px;
+  max-width: 100%;
+  width: 60%;
+}
+
+
+
+.structure-content2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
 .model-economique-titres{
   width: 60%;
   margin-top: 30px;
@@ -1229,14 +1297,9 @@ article {
   margin-top: 30px;
 }
 
-.content-structure h3{
+.structure-content1 h3{
   font-size: 1.5em;
   margin-top: 30px;
-  display: flex;
- 
-  align-content: center;
-  align-items: center;
-  justify-content: center;
 }
 
 .section-structure .btn-soutenir{
@@ -1248,22 +1311,9 @@ article {
   align-content: center;
 }
 
-.section-structure{
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
 .model-economique-titres h2, .section-structure h2{
   color: var(--secondary-purple);
   font-weight: bold;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
 }
 
  .model-economique-text{
@@ -1275,7 +1325,7 @@ article {
  }
 
 
-/* ! MEDIAQUERIES */
+ /* ! MEDIAQUERIES */
 @media screen and (min-width: 375px) {
   /* MOUVEMENT */
   .title-mouvement::after {
@@ -1289,7 +1339,9 @@ article {
   .evenement-title > h2::after {
     width: 85%;
   }
-
+  .image-titre-fonctionnement{
+    margin-top:0px;
+  }
 }
 @media screen and (min-width: 425px) {
   /* MOUVEMENT */
@@ -1303,6 +1355,19 @@ article {
   /* EVENEMENT */
   .evenement-title > h2::after {
     width: 72%;
+  }
+
+   /*page-mode-fonctionnement*/
+   .image-store-slide{
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   
+  }
+  .image-titre-fonctionnement{
+    margin-top: 0px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1426,7 +1491,15 @@ article {
   .menu {
     width: 50%;
   }
-
+  
+   /*page-mode-fonctionnement*/
+   .image-store-slide{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+   }
 }
 @media screen and (min-width: 1024px) {
   /* NAVBAR */
@@ -1573,8 +1646,26 @@ article {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }
+  
+  /*mode-fonctionnement */
+  .image-store-slide{
+    z-index: 999;
+    position: relative;
+    top: 50%;
+    animation: rotation 0.8s ease-in reverse;
+    max-width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .image-titre-fonctionnement{
+    margin-top: 100px;
+  }
 
 }
+
 @media screen and (min-width: 1440px) {
   /* NAVBAR */
   .nav-links {
@@ -1637,6 +1728,21 @@ article {
   /* EVENEMENT */
   .evenement-title > h2::after {
     width: 38%;
+  }
+
+  /*mode-fonctionnement */
+  .image-store-slide{
+    z-index: 999;
+    position: relative;
+    margin-top: 10%;
+  
+    animation: rotation 0.8s ease-in reverse;
+    max-width: 100%;
+    display: flex;
+  }
+
+  .image-titre-fonctionnement{
+    margin-top: 100px;
   }
 
 }
