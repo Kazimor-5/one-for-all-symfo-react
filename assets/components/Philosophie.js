@@ -3,12 +3,14 @@ import React from 'react';
 const Philosophie = () => {
   return (
     <section className='section-pagePhilo'>
-      <article className='title-container'>
-        <img
-          src='./assets/constat/bouton-consta.png'
-          alt='notre constat'
-          className='img'
-        />
+      <article className='title-constat-container'>
+        <div className='title-container'>
+          <img
+            src='./assets/constat/bouton-consta.png'
+            alt='notre constat'
+            className='img'
+          />
+        </div>
         <div className='handContainer'>
           <img
             src='./assets/constat/imaneConstat.png'
@@ -33,12 +35,14 @@ const Philosophie = () => {
           , plus respectueuse des êtres qui peuplent la Terre.
         </p>
       </article>
-      <article className='title-container'>
-        <img
-          src='./assets/presentation/ambition.png'
-          alt='notre ambition'
-          className='img'
-        />
+      <article className='title-ambition-container'>
+        <div className='title-container'>
+          <img
+            src='./assets/presentation/ambition.png'
+            alt='notre ambition'
+            className='img'
+          />
+        </div>
         <div className='picture-list'>
           <div className='culture-img-container'>
             <img
