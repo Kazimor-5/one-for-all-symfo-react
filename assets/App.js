@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage';
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ModeFonctionnement from './components/ModeFoctionnement';
+import Evenement from './components/Evenement';
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route index element={<LandingPage />} />
-        <Route path='/modeFonctionnement' element={<ModeFonctionnement />} />
+        <Route path='/evenement' element={<Evenement />} />
       </Routes>
     </Router>
   );
