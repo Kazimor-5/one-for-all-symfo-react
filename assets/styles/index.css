@@ -1177,8 +1177,107 @@ article {
   box-shadow: var(--shadow-4);
 }
 
-
-
+/*page-evenement */
+.challenge-text-container .challenge-btn{
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+}
+.section-page-evenement{
+  line-height: 30px;
+    font-size: large;
+}
+.challenge-text-container .challenge-titre h3{
+  color:var(--secondary-purple);
+  font-size: 25px;
+  margin-top: 20px;
+}
+  .challenge-je-suis-container{
+    line-height: 30px;
+    font-size: medium;    
+    color: black;
+  }
+  .challenge-image{
+    margin-left: 110px;
+    margin-top: 50px;
+  }
+  .challenge-text-boutton{
+    margin-right: 110px;
+  }
+  .container-evenement-content{
+    line-height: 30px;
+    font-size: large;
+    color: var(--grey-900);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .nos-evenement-content{
+       display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    
+  }
+  .challenge-image-titre{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .challenge-je-suis-container{
+    margin-top: 50px;
+  }
+  .nos-evenement-image2{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .nos-evenement-image1{
+    margin-right: 50px;
+  }
+  .evenement-content1-text{  
+    margin-left: 50px;
+    margin-top: -15px;
+  }
+  .defi-famine-container{
+    background-color: rgba(197, 232, 232, 0.388);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+  }
+  .defi-famine-content-2{
+    margin-right: 100px;
+  }
+  .defi-famine-content-2 h2{
+    margin-top: 40px;
+    color: var(--secondary-purple);
+  }
+  .defi-famine-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  .image-defi-famine{
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+  .image-defi-famine-titre{
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  .defi-famine-btn{
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+  }
 
 /* ! MEDIAQUERIES */
 @media screen and (min-width: 375px) {
