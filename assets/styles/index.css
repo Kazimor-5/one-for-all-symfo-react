@@ -1176,6 +1176,25 @@ article {
   background: none;
   box-shadow: var(--shadow-4);
 }
+/* ! PAGE SOUTIENS */
+.section-soutiensPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+}
+.soutiensPage-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+.soutiensPage-content,
+.soutiensPage-img-container {
+  width: 90%;
+}
 /* ! MEDIAQUERIES */
 @media screen and (min-width: 375px) {
   /* MOUVEMENT */
@@ -1471,6 +1490,14 @@ article {
   .contact-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+  }
+  /* SOUTIENS PAGE */
+  .title-ligue-container {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .soutiensPage-img-container {
+    width: 50%;
   }
 }
 @media screen and (min-width: 1440px) {
