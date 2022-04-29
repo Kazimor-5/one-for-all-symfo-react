@@ -1496,8 +1496,24 @@ article {
     margin: 0 auto;
     width: 70%;
   }
-  .soutiensPage-img-container {
-    width: 50%;
+  .soutiensPage-picture-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .soutiensPage-img-container,
+  .soutiensPage-img-container-vert {
+    width: 33%;
+  }
+  .soutiensPage-img-container-vert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 1rem;
   }
 }
 @media screen and (min-width: 1440px) {

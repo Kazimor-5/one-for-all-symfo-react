@@ -31,30 +31,30 @@ const Soutiens = () => {
           <span className='bold'>Ligue des Héros Altruistes</span>.
         </p>
       </article>
-      <article className='soutiensPage-img-container'>
-        <img
-          src='./assets/ligue/soutiens_slide1.jpg'
-          alt='Franck Kessié, Yann Karamoh et Gervinho, parrains de l’association #One4All'
-          className='img'
-        />
-      </article>
-      <article className='soutiensPage-img-container'>
-        <img
-          src='./assets/ligue/lisa_vanderpump.jpg'
-          alt='lisa vanderpump'
-          className='img'
-        />
-      </article>
-      <article className='soutiensPage-img-container'>
-        <img src='./assets/ligue/redfoo.jpg' alt='redfoo' className='img' />
-      </article>
-      <article className='soutiensPage-img-container'>
-        <img
-          src='./assets/ligue/matt_damon.jpg'
-          alt='matt damon'
-          className='img'
-        />
-      </article>
+      <div className='soutiensPage-picture-container'>
+        <article className='soutiensPage-img-container'>
+          <img
+            src='./assets/ligue/soutiens_slide1.jpg'
+            alt='Franck Kessié, Yann Karamoh et Gervinho, parrains de l’association #One4All'
+            className='img'
+          />
+        </article>
+        <article className='soutiensPage-img-container-vert'>
+          <img
+            src='./assets/ligue/lisa_vanderpump.jpg'
+            alt='lisa vanderpump'
+            className='img'
+          />
+          <img src='./assets/ligue/redfoo.jpg' alt='redfoo' className='img' />
+        </article>
+        <article className='soutiensPage-img-container'>
+          <img
+            src='./assets/ligue/matt_damon.jpg'
+            alt='matt damon'
+            className='img'
+          />
+        </article>
+      </div>
       <article className='soutiensPage-content'>
         <p>
           Ces personnalités, venant d’horizons divers (sport, musique, cinéma…),
