@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { follow } from '../data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -150,8 +150,18 @@ const Rejoindre = () => {
               <span className="font-noir">De nombreuses personnes à travers le monde</span> se lèvent et marchent ensemble dans le but de faire émerger le Mouvement <span className="one4all-font gray">#One4All</span> et relayer le message de la philosophie Altruiste au plus grand nombre.
               </p>
               <h3 className='bold'>REJOIGNEZ NOTRE COMMUNAUTÉ !!!</h3>
-              <div className='btn-reseau'>
-                
+              <div className='follow'>
+             
+                {follow.map((item) => {
+                  const { id, icon, network, anchor } = item;
+
+                  return (
+                    <a key={id} href={anchor} className={`follow-anchor ${network}`}>
+                      <i className='follow-icon'>{icon}</i>
+                    </a>
+                  );
+                })}
+
               </div>
           </div> 
         </div>
