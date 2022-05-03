@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage';
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Rejoindre from './components/Rejoindre';
+import Mission from './components/Mission';
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route index element={<LandingPage />} />
-        <Route path='/rejoindre' element={<Rejoindre />} />
+        <Route path='/mission' element={<Mission />} />
       </Routes>
     </Router>
   );

@@ -5,7 +5,7 @@ import { follow } from '../data';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Rejoindre = () => {
+const Mission = () => {
   const slideInRight = (elem, delay, duration) => {
     gsap.fromTo(
       elem,
