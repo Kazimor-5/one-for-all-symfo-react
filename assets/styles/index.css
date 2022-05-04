@@ -1293,6 +1293,9 @@ article {
   .evenement-title > h2::after {
     width: 85%;
   }
+  .defi-famine-content-2{
+    flex-direction: column;
+  }
 
 }
 @media screen and (min-width: 425px) {

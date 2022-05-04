@@ -117,22 +117,22 @@ const Evenement = () => {
   return (
     <section className='section-page-evenement'>
       <article className='evenement-header'>
-        <img src='./assets/evenement/Slide-events.jpg' />
+        <img className='img' src='./assets/evenement/Slide-events.jpg' />
       </article>
       <article className='evenement-content'>
           <div className='evenement-image-titre'>
-          <img src='' />
+          <img className='img' src='' />
           </div>
           <div className='container-evenement-content'>
               <div className='nos-evenement-content'>
                   <div className='nos-evenement-image1'>
-                      <img src='./assets/evenement/s02.png' />
+                      <img className='img' src='./assets/evenement/s02.png' />
                   </div>
                   <div className='evenement-content1-text'>
-                      <p>Le #One4All Giro2020 est une tournée des clubs de football professionnels européens qui a pour objet de sensibiliser les acteurs du monde du sport sur les enjeux et conséquences de la crise du Covid-19.
+                      <p>Le <span className="one4all-font">#One4All</span> Giro2020 est une tournée des clubs de football professionnels européens qui a pour objet de sensibiliser les acteurs du monde du sport sur les enjeux et conséquences de la crise du Covid-19.
                       </p>
                       <p>
-                          L’objectif de cette tournée est d’inviter les sportifs de haut niveau à participer à la collecte mondiale de fonds à travers l’opération #jeSUISONE4ALL. Une opportunité de briller sur le terrain de la solidarité en tant que sportif et citoyen du monde.
+                          L’objectif de cette tournée est d’inviter les sportifs de haut niveau à participer à la collecte mondiale de fonds à travers l’opération <span className="one4all-font">#jeSUISONE4ALL</span>. Une opportunité de briller sur le terrain de la solidarité en tant que sportif et citoyen du monde.
                       </p>
                       <p>   
                           Joueurs et supporters deviennent partenaires du même objectif.
@@ -140,7 +140,7 @@ const Evenement = () => {
                   </div>
               </div>
               <div className='nos-evenement-image2'>
-                <img src='./assets/evenement/bacazazfcvv-02.png' />
+                <img className='img' src='./assets/evenement/bacazazfcvv-02.png' />
               </div>
           </div>
       </article>
@@ -148,7 +148,7 @@ const Evenement = () => {
           <div className='defi-famine-content'>
             <div className='defi-famine-content-2'>
               <div className='image-defi-famine-titre'>
-                <img src='./assets/evenement/defi_famine_2.png' />
+                <img className='img' src='./assets/evenement/defi_famine_2.png' />
               </div>
               <h2 className='bold'>UN DISPOSITIF INÉDIT</h2>
               <div className='defi-famine-text'>
@@ -156,15 +156,15 @@ const Evenement = () => {
                       Les entreprises participantes à cette opération qui se déroule sur 10 ans s’engagent à collecter et donner au minimum 10 € par jour.
                   </p>
                   <p>
-                      C’est le pari que lance #One4All aux 500.000 entreprises (soit plus de 3.000 entreprises engagées par pays) dans le monde qui relèveront le défi.
+                      C’est le pari que lance <span className="one4all-font">#One4All</span> aux 500.000 entreprises (soit plus de 3.000 entreprises engagées par pays) dans le monde qui relèveront le défi.
                   </p>
                   <p>
-                      Participer au Défi Famine #One4All, c’est oeuvrer à tourner la page de la faim dans le monde.
+                      Participer au Défi Famine <span className="one4all-font">#One4All</span>, c’est oeuvrer à tourner la page de la faim dans le monde.
                   </p>
               </div> 
             </div>
             <div className='image-defi-famine'>
-              <img src='./assets/evenement/defi_famine.png' />
+              <img className='img' src='./assets/evenement/defi_famine.png' />
             </div>
           </div>
           <div className='defi-famine-btn'>
@@ -175,11 +175,11 @@ const Evenement = () => {
       </article>
       <article className='challenge-je-suis-container'>
           <div className='challenge-image-titre'>
-              <img src='./assets/evenement/je_suis_one4all.png' />
+              <img className='img' src='./assets/evenement/je_suis_one4all.png' />
           </div>
           <div className='challenge-content'>
               <div className='challenge-image'>
-                  <img src='./assets/evenement/je_suis_one4all_2.png' />
+                  <img className='img' src='./assets/evenement/je_suis_one4all_2.png' />
               </div>
               <div className='challenge-text-container' >
                   <div className='challenge-titre'>
@@ -189,7 +189,7 @@ const Evenement = () => {
                   </div>
                   <div className='challenge-text-boutton'>
                       <p>
-                          Le Mouvement Altruiste #One4All lance un appel international à la solidarité au travers de l’opération #jeSUISONE4ALL pour venir en aide à toutes les personnes, structures sociales et médicales où qu’elles se trouvent dans le monde.
+                          Le Mouvement Altruiste <span className="one4all-font">#One4All</span> lance un appel international à la solidarité au travers de l’opération <span className="one4all-font">#jeSUISONE4ALL</span> pour venir en aide à toutes les personnes, structures sociales et médicales où qu’elles se trouvent dans le monde.
                       </p>
                       <p>
                           La solidarité est un challenge. Regarder en direction des autres est le premier pas sur la Voie de l’Altruisme !
