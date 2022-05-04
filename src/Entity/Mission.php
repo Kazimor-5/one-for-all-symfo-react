@@ -6,37 +6,54 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\MissionRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 #[ORM\Entity(repositoryClass: MissionRepository::class)]
+#[ApiResource(
+        collectionOperations: ['get' => ['normalization_context' => ['groups' => 'mission:list']]],
+        itemOperations: ['get' => ['normalization_context' => ['groups' => 'mission:item']]],
+        order: ['category' => 'DESC', 'status' => 'ASC'],
+        paginationEnabled: false,
+        attributes: ['pagination_enabled' => false]
+    )]
 class Mission
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['mission:list', 'mission:item'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['mission:list', 'mission:item'])]
     private $category;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['mission:list', 'mission:item'])]
     private $name;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['mission:list', 'mission:item'])]
     private $scope;
 
     #[ORM\Column(type: 'text')]
+    #[Groups(['mission:list', 'mission:item'])]
     private $description;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['mission:list', 'mission:item'])]
     private $picture;
 
     #[ORM\Column(type: 'datetime', nullable: true)]
+    #[Groups(['mission:list', 'mission:item'])]
     private $dateStart;
 
     #[ORM\Column(type: 'datetime', nullable: true)]
+    #[Groups(['mission:list', 'mission:item'])]
     private $dateEnd;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['mission:list', 'mission:item'])]
     private $status;
 
     public function getId(): ?int
