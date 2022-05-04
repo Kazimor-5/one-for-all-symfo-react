@@ -10,51 +10,54 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 #[ORM\Entity(repositoryClass: MissionRepository::class)]
 #[ApiResource(
-        collectionOperations: ['get' => ['normalization_context' => ['groups' => 'mission:list']]],
-        itemOperations: ['get' => ['normalization_context' => ['groups' => 'mission:item']]],
-        order: ['category' => 'DESC', 'status' => 'ASC'],
-        paginationEnabled: false,
-        attributes: ['pagination_enabled' => false]
-    )]
+    #normalizationContext={"groups"={"mission:read"}},
+    #denormalizationContext={"groups"={"mission:write"}}
+)]
 class Mission
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    #[Groups(['mission:list', 'mission:item'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Groups(['mission:list', 'mission:item'])]
+    #[Groups(['mission:read', 'mission:write'])]
     private $category;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Groups(['mission:list', 'mission:item'])]
+    #[Groups(['mission:read', 'mission:write'])]
     private $name;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Groups(['mission:list', 'mission:item'])]
+    #[Groups(['mission:read', 'mission:write'])]
     private $scope;
 
     #[ORM\Column(type: 'text')]
-    #[Groups(['mission:list', 'mission:item'])]
+    #[Groups(['mission:read', 'mission:write'])]
     private $description;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    #[Groups(['mission:list', 'mission:item'])]
+    #[Groups(['mission:read', 'mission:write'])]
     private $picture;
 
     #[ORM\Column(type: 'datetime', nullable: true)]
-    #[Groups(['mission:list', 'mission:item'])]
+    #[Groups(['mission:read'])]
     private $dateStart;
 
     #[ORM\Column(type: 'datetime', nullable: true)]
-    #[Groups(['mission:list', 'mission:item'])]
+    #[Groups(['mission:read'])]
     private $dateEnd;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Groups(['mission:list', 'mission:item'])]
+    #[Groups(['mission:read', 'mission:write'])]
     private $status;
+
+    public function __construct()
+    {
+        $this->dateStart = new \DateTime();
+        $this->dateEnd = new \DateTime();
+        $this->status = 'pending';
+    }
 
     public function getId(): ?int
     {
