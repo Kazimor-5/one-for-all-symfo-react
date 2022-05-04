@@ -91,111 +91,66 @@ const Mission = () => {
   };
 
   useEffect(() => {
-    slideInBottom('.image-reseau-communaute');
+    slideInBottom('.titre-mission-1');
+  }, []);
+
+
+  useEffect(() => {
+    slideInBottom('.mission-image1');
   }, []);
 
   useEffect(() => {
-    slideInTop('.image1-reseau-communaute');
-  }, []);
-
-  useEffect(() => {
-    slideInBottom('.reseau-image1');
-  }, []);
-
-  useEffect(() => {
-    slideInBottom('.reseau-image4');
-  }, []);
-
-  useEffect(() => {
-    slideInLeft('.reseau-image2');
+    slideInBottom('.mission-image3');
   }, []);
 
 
   return (
-    <section className='section-page-rejoindre'>
-      <article className='reseau-header'>
-        <img className='img' src='./assets/reseau/Slide-Notre-réseau.jpg' />
+    <section className='section-page-mission'>
+      <article className='mission-header'>
+        <img className='img' src='./assets/missions/Slide-planete.jpg' />
       </article>
-      <article className='reseau-container1'>
-            
-        <div className='reseau-content1'>
-            <div className='reseau-image2'>
-              <img className='img' src='./assets/reseau/reseau-700x211.png' />
-            </div>
-           
-          <div className="reseau-content1-text">
-              <div className='reseau-image1'>
-                <img  className='img' src='./assets/reseau/planet.png' />
-              </div> 
-              <div className='reseau-para'>
-                <p>
-                  <span className="font-gray one4all-font">#One4All</span> a pour objectif de <span className="font-noir">s’implanter dans 165 pays</span> afin de développer le système Altruiste à l’échelle planétaire.
-                </p>
-                <p>
-                  Le réseau <span className="font-gray one4all-font">#One4All</span> se construit grâce à la mise en place d’antennes locales et nationales qui synchronisent mondialement leurs actions.
-                  C’est grâce aux bâtisseurs d’aujourd’hui et de demain que nous construirons un avenir robuste et solidaire.
-                </p>
-              </div>
-            
-          </div>    
-        </div>
-      </article>
-      <article className='reseau-container2'>
-        <div className='reseau-content2'>
-          <div className='image-reseau-communaute'>
-            <img className='img' src='./assets/reseau/une_communaute_inter.png' />
-          </div>
-          <div className='reseau-content-text2'>
+      <article className='mission-container1'>
+           <h2 className='bold titre-mission-1'>Nos Mission</h2>
+          <div className="mission-content">
+            <div className='mission-text'>
               <p>
-              <span className="font-noir">De nombreuses personnes à travers le monde</span> se lèvent et marchent ensemble dans le but de faire émerger le Mouvement <span className="one4all-font gray">#One4All</span> et relayer le message de la philosophie Altruiste au plus grand nombre.
+                <span className="font-gray one4all-font">#One4All</span> porte son regard sur le monde et ses enjeux en militant activement dans
+                plusieurs domaines d’intervention :
               </p>
-              <h3 className='bold'>REJOIGNEZ NOTRE COMMUNAUTÉ !!!</h3>
-              <div className='follow'>
-             
-                {follow.map((item) => {
-                  const { id, icon, network, anchor } = item;
-
-                  return (
-                    <a key={id} href={anchor} className={`follow-anchor ${network}`}>
-                      <i className='follow-icon'>{icon}</i>
-                    </a>
-                  );
-                })}
-
-              </div>
+            </div>
+            <div className='mission-image1'>
+              <img  className='img' src='./assets/missions/Fleur-5domaines.png' />
+            </div> 
+          </div>    
+      </article>
+      <article className='mission-container2'>
+        <div className='mission-content2'>
+          <h2 className='bold'>Découvrir les prochaines missions <span className="font-gray one4all-font">#One4All</span> en 2022 :</h2>
+          <div className='reseau-content-bouttons-mission'>
+              <button className='btn'>Economique, Social & Culturel</button>
+              <button className='btn'>Humanitaire</button>
+              <button className='btn'>Monde Animalier</button>
+              <button className='btn'>Environnemental</button>
+              <button className='btn'>Médical, Technologique & Artistique</button>
           </div> 
         </div>
-        <div className='image1-reseau-communaute'>
-          <img className='img' src='./assets/reseau/international.png' />
-        </div>
       </article>
-      <article className='reseau-container3'>
-          <div className='reseau-image4'>
-              <img className='img' src='./assets/reseau/avddv-02-1.png' />
-          </div>
-          <ul className='reseau-challenge-content'>
-              <li>
-                {'> '} Rejoindre la Team <span className="font-gray one4all-font">#One4All</span>
-              </li>
-              <li>
-                {'> '} Faire un don – Legs
-              </li>
-              <li>
-                {'> '}Faire un achat sur la boutique <span className="font-noir ">#ONE-<span className="font-yellow">IV</span><span className="font-noir">-ALL</span></span> California
-              </li>
-              <li>
-                {'> '}Faire un achat via la Market-place <span className="font-gray one4all-font">#One4All</span> <span className="font-yellow one4all-font">Store</span>
-              </li>
-              <li>
-                {'> '}Participer à nos événements : Concerts, Showcases, Festivals, Marches et Collectes de Dons.
-              </li>
-              <li>
-                {'> '}Devenir partenaire professionnel de la marque <span className="font-noir ">#ONE-<span className="font-yellow">IV</span><span className="font-noir">-ALL</span></span> California, du <span className="font-gray one4all-font">#One4All</span> <span className="font-yellow one4all-font">Store</span> et/ou du Défi FAMINE <span className="font-gray one4all-font">#One4All</span>
-              </li>
-          </ul>
+      <article className='mission-container3'>
+        <p>
+          <span className="font-gray one4all-font">#One4All</span> est actuellement dans sa phase de structuration pour ensuite passer au développement puis au lancement.
+        </p>
+        <div className='mission-image3'>
+            <img className='img' src='./assets/missions/thermo-copie.png' />
+        </div>
+        <p>
+          Vous êtes libres de participer à la construction de <span className="font-gray one4all-font">#One4All</span>, d’aider à son développement ou encore de vous engager à nos côtés au sein de notre structure.
+        </p>
+        <h2 className='titre1'>Bâtissons ensemble l’avenir de l’Humanité !</h2>
+        <h2 className='titre2'>Soutenir <span className="one4all-font">#One4All</span></h2>
+        <button className='btn btn-soutenir'>JE PARTICIPE</button>
       </article>
     </section>
   );
 };
 
-export default Rejoindre;
+export default Mission;
