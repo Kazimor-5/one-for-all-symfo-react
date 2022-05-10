@@ -10,9 +10,12 @@ import EditEvent from './components/addEvent/EditEvent';
 import Soutiens from './components/Soutiens';
 import Philosophie from './components/Philosophie';
 import Faq from './components/Faq';
+import PageNotreRevolution from './components/PageNotreRevolution';
 // ! FILES
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 const App = () => {
   return (
@@ -29,6 +32,7 @@ const App = () => {
         <Route path='/soutiens' element={<Soutiens />} />
         <Route path='/philosophie' element={<Philosophie />} />
         <Route path='/faq' element={<Faq />} />
+        <Route path='/revolution' element={<PageNotreRevolution /> } />
       </Routes>
     </Router>
   );

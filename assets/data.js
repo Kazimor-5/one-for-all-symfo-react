@@ -23,7 +23,7 @@ export const navLinks = [
   },
   {
     id: 3,
-    name: 'révolution',
+    name: 'revolution',
     icon: '',
   },
   {
