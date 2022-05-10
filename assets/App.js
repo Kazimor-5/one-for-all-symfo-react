@@ -13,6 +13,7 @@ import Faq from './components/Faq';
 import NotreRevolution from './components/revolution/NotreRevolution';
 import Evenement from './components/Evenement';
 import Mission from './components/Mission';
+import ModeFonctionnement from './components/ModeFonctionnement';
 // ! FILES
 
 import React from 'react';
@@ -36,6 +37,7 @@ const App = () => {
         <Route path='/revolution' element={<NotreRevolution />} />
         <Route path='/evenements' element={<Evenement />} />
         <Route path='/mission' element={<Mission />} />
+        <Route path='/modeFonctionnement' element={<ModeFonctionnement />} />
       </Routes>
     </Router>
   );
