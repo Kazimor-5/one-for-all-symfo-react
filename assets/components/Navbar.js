@@ -64,7 +64,7 @@ const Navbar = () => {
 
           return (
             <li key={id} className='nav-btn'>
-              <Link className='nav-btn' to={`/${name}`}>
+              <Link className='nav-btn' to={`/${anchor}`}>
                 {name}
               </Link>
             </li>

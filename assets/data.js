@@ -15,26 +15,31 @@ export const navLinks = [
     id: 1,
     name: 'présentation',
     icon: '',
+    anchor: 'presentation',
   },
   {
     id: 2,
     name: 'philosophie',
     icon: '',
+    anchor: 'philosophie',
   },
   {
     id: 3,
-    name: 'revolution',
+    name: 'révolution',
     icon: '',
+    anchor: 'revolution',
   },
   {
     id: 4,
     name: 'activités',
     icon: '',
+    anchor: 'activites',
   },
   {
     id: 5,
     name: 'missions',
     icon: '',
+    anchor: 'missions',
   },
   {
     id: 6,
@@ -45,26 +50,31 @@ export const navLinks = [
     id: 7,
     name: 'évènements',
     icon: '',
+    anchor: 'evenements',
   },
   {
     id: 8,
     name: 'soutiens',
     icon: '',
+    anchor: 'soutiens',
   },
   {
     id: 9,
     name: 'rejoindre',
     icon: '',
+    anchor: 'rejoindre',
   },
   {
     id: 10,
     name: 'adhérer',
     icon: <FaHeart />,
+    anchor: 'adherer',
   },
   {
     id: 11,
     name: 'faire un don',
     icon: <BiDonateHeart />,
+    anchor: 'donation',
   },
 ];
 
