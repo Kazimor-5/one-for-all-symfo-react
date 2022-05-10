@@ -7,6 +7,7 @@ import AddEvents from './components/addEvent/AddEvents';
 import GetEvents from './components/addEvent/GetEvents';
 import Details from './components/addEvent/Details';
 import EditEvent from './components/addEvent/EditEvent';
+import Soutiens from './components/Soutiens';
 // ! FILES
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/getEvents' element={<GetEvents />} />
         <Route path='/getEvent/:id' element={<Details />} />
         <Route path='/editEvent/:id' element={<EditEvent />} />
+        <Route path='/soutiens' element={<Soutiens />} />
       </Routes>
     </Router>
   );
