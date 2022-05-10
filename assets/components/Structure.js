@@ -31,7 +31,7 @@ const Structure = () => {
   }, []);
 
   useEffect(() => {
-    slideInTop('.image-foctionnement2');
+    slideInTop('.image-fonctionnement2');
   }, []);
 
   return (

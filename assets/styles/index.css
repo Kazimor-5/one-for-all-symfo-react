@@ -1841,6 +1841,149 @@ article {
   margin-bottom: 20px;
 }
 
+/* page-mode-fonctionnement */
+.header-fonctionnement {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.image-header-fonctionnement {
+  min-width: 100%;
+  position: absolute;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-store-slide {
+  z-index: 999;
+  position: relative;
+  margin-top: 10%;
+
+  animation: rotation 0.8s ease-in reverse;
+  max-width: 100%;
+}
+
+@keyframes rotation {
+  from {
+    transform: translateX(0px) rotateY(0deg);
+  }
+  to {
+    transform: translateX(0px) rotateY(360deg);
+  }
+}
+
+.image-titre-fonctionnement {
+  margin-top: 200px;
+}
+
+.modeFonctionnement {
+  flex-direction: column;
+}
+
+.modeFonctionnement img {
+  max-width: 100%;
+}
+
+.image-fonctionnement2 img {
+  max-width: 100%;
+}
+
+.model-economique-titres h3 {
+  color: rgba(205, 165, 63, 0.749);
+  font-weight: bold;
+  width: 80%;
+}
+.fonctionnement-font-noir {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.image-fonctionnement2 {
+  width: 800px;
+}
+.content-model {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+.section-structure {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  line-height: 30px;
+  margin-top: 50px;
+}
+
+.structure-content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+.structure-content2 img {
+  padding: 20px;
+  max-width: 100%;
+  width: 60%;
+}
+
+.structure-content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.model-economique-titres {
+  width: 60%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: large;
+}
+
+.model-economique-titres h3 {
+  margin-top: 30px;
+}
+
+.structure-content1 h3 {
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+.section-structure .btn-soutenir {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.model-economique-titres h2,
+.section-structure h2 {
+  color: var(--secondary-purple);
+  font-weight: bold;
+}
+
+.model-economique-text {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: var(--black);
+  width: 60%;
+}
+
 /* ! MEDIAQUERIES */
 @media screen and (min-width: 375px) {
   /* MOUVEMENT */
@@ -1858,6 +2001,9 @@ article {
   .defi-famine-content-2 {
     flex-direction: column;
   }
+  .image-titre-fonctionnement {
+    margin-top: 0px;
+  }
 }
 @media screen and (min-width: 425px) {
   /* MOUVEMENT */
@@ -1871,6 +2017,17 @@ article {
   /* EVENEMENT */
   .evenement-title > h2::after {
     width: 72%;
+  }
+  /*page-mode-fonctionnement*/
+  .image-store-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .image-titre-fonctionnement {
+    margin-top: 0px;
   }
 }
 
@@ -2010,6 +2167,14 @@ article {
   .content-revolution1 {
     display: flex;
     flex-direction: column;
+  }
+  /*page-mode-fonctionnement*/
+  .image-store-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2188,6 +2353,23 @@ article {
     justify-content: space-around;
     column-gap: 1rem;
   }
+
+  /*mode-fonctionnement */
+  .image-store-slide {
+    z-index: 999;
+    position: relative;
+    top: 50%;
+    animation: rotation 0.8s ease-in reverse;
+    max-width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .image-titre-fonctionnement {
+    margin-top: 100px;
+  }
 }
 @media screen and (min-width: 1440px) {
   /* NAVBAR */
@@ -2255,5 +2437,19 @@ article {
   /* PAGE PHILO */
   .fleurContainer {
     width: 30%;
+  }
+  /*mode-fonctionnement */
+  .image-store-slide {
+    z-index: 999;
+    position: relative;
+    margin-top: 10%;
+
+    animation: rotation 0.8s ease-in reverse;
+    max-width: 100%;
+    display: flex;
+  }
+
+  .image-titre-fonctionnement {
+    margin-top: 100px;
   }
 }

@@ -14,6 +14,7 @@ import NotreRevolution from './components/revolution/NotreRevolution';
 import Evenement from './components/Evenement';
 import Mission from './components/Mission';
 import ModeFonctionnement from './components/ModeFonctionnement';
+import NosActivitesCommerciales from './components/NosActivitesCommerciales';
 // ! FILES
 
 import React from 'react';
@@ -38,6 +39,7 @@ const App = () => {
         <Route path='/evenements' element={<Evenement />} />
         <Route path='/mission' element={<Mission />} />
         <Route path='/modeFonctionnement' element={<ModeFonctionnement />} />
+        <Route path='/activites' element={<NosActivitesCommerciales />} />
       </Routes>
     </Router>
   );
