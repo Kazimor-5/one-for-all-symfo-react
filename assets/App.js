@@ -1,4 +1,4 @@
-// !COMPONENTS
+// ! COMPONENTS
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import ContactForm from './components/contact/ContactForm';
@@ -15,6 +15,7 @@ import Evenement from './components/Evenement';
 import Mission from './components/Mission';
 import ModeFonctionnement from './components/ModeFonctionnement';
 import NosActivitesCommerciales from './components/NosActivitesCommerciales';
+import Rejoindre from './components/Rejoindre';
 // ! FILES
 
 import React from 'react';
@@ -40,6 +41,7 @@ const App = () => {
         <Route path='/mission' element={<Mission />} />
         <Route path='/modeFonctionnement' element={<ModeFonctionnement />} />
         <Route path='/activites' element={<NosActivitesCommerciales />} />
+        <Route path='/rejoindre' element={<Rejoindre />} />
       </Routes>
     </Router>
   );
