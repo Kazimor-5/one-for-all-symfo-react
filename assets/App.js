@@ -10,7 +10,7 @@ import EditEvent from './components/addEvent/EditEvent';
 import Soutiens from './components/Soutiens';
 import Philosophie from './components/Philosophie';
 import Faq from './components/Faq';
-// import PageNotreRevolution from './components/PageNotreRevolution';
+import NotreRevolution from './components/revolution/NotreRevolution';
 import Evenement from './components/Evenement';
 // ! FILES
 
@@ -32,7 +32,7 @@ const App = () => {
         <Route path='/soutiens' element={<Soutiens />} />
         <Route path='/philosophie' element={<Philosophie />} />
         <Route path='/faq' element={<Faq />} />
-        {/* <Route path='/revolution' element={<PageNotreRevolution />} /> */}
+        <Route path='/revolution' element={<NotreRevolution />} />
         <Route path='/evenements' element={<Evenement />} />
       </Routes>
     </Router>
