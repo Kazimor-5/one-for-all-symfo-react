@@ -12,6 +12,7 @@ import Philosophie from './components/Philosophie';
 import Faq from './components/Faq';
 import NotreRevolution from './components/revolution/NotreRevolution';
 import Evenement from './components/Evenement';
+import Mission from './components/Mission';
 // ! FILES
 
 import React from 'react';
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='/faq' element={<Faq />} />
         <Route path='/revolution' element={<NotreRevolution />} />
         <Route path='/evenements' element={<Evenement />} />
+        <Route path='/mission' element={<Mission />} />
       </Routes>
     </Router>
   );
