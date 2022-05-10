@@ -2,6 +2,7 @@
 import BtnUp from './BtnUp';
 // ! FILES
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { follow, navLinks } from '../../data';
 
 const Footer = () => {
@@ -15,7 +16,7 @@ const Footer = () => {
       <article className='propos'>
         <h4>a propos</h4>
         <a href='#'>Mentions Légales</a>
-        <a href='#'>FAQ</a>
+        <Link to='/faq'>FAQ</Link>
         <a href='#'>Accueil</a>
       </article>
       <article className='follow'>
