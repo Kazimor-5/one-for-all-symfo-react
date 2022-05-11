@@ -19,7 +19,6 @@ import Rejoindre from './components/Rejoindre';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 // ! FILES
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -42,7 +41,7 @@ const App = () => {
         <Route path='/faq' element={<Faq />} />
         <Route path='/revolution' element={<NotreRevolution />} />
         <Route path='/evenements' element={<Evenement />} />
-        <Route path='/mission' element={<Mission />} />
+        <Route path='/missions' element={<Mission />} />
         <Route path='/modeFonctionnement' element={<ModeFonctionnement />} />
         <Route path='/activites' element={<NosActivitesCommerciales />} />
         <Route path='/rejoindre' element={<Rejoindre />} />
