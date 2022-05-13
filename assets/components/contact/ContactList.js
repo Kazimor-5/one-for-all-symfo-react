@@ -43,7 +43,7 @@ const ContactList = () => {
         headers: { 'Content-Type': 'application/merge-patch+json' },
       };
       setIsChecked(!isChecked);
-      await axios.patch(`${url}${id}`, { view: !isChecked }, options);
+      await axios.patch(`${url}${id}`, { view: isChecked }, options);
     } catch (error) {
       console.log(error);
       console.log(error.response);

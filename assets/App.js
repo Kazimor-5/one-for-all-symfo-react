@@ -18,6 +18,7 @@ import NosActivitesCommerciales from './components/NosActivitesCommerciales';
 import Rejoindre from './components/Rejoindre';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
+import Home from './components/admin/screens/Home';
 // ! FILES
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -49,6 +50,7 @@ const App = () => {
         {/* <Route path="/login" element={user ? <Navigate to="/" replace /> : <Login />} /> */}
         <Route path='/register' element={<Register />} />
         {/* <Route path="/register" element={user ? <Navigate to="/" replace /> : <Register />} /> */}
+        <Route path='/admin' element={<Home />} />
       </Routes>
     </Router>
   );
