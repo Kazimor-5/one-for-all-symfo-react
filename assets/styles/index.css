@@ -1487,6 +1487,114 @@ article {
   width: 90%;
 }
 
+/* page-revolution */
+.header-revolution img{
+  max-width: 100%;
+}
+.page-revolution{
+  line-height: 30px;
+  word-spacing: 8px;
+}
+.page-revolution-content{
+    flex-direction: column;
+ width: 80%;
+  display: flex;
+  margin: auto;
+  align-content: center;
+  align-items: center;
+  grid-area: content;
+  justify-content: center;
+  margin-top: -25px;
+  padding-top: 30px;
+   background-color : rgba(255, 255, 255,0.8); 
+}
+
+.wrap{
+  display: grid;
+  min-height:100vh;
+}
+.content-revolution1 p{
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.content-revolution1{
+  display: flex;
+ flex-direction: row;
+  justify-content: space-around;
+ 
+}
+
+
+
+.page-revolution-content1 h1{
+  display: flex;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--secondary-purple);
+  margin-bottom: 50px;
+}
+
+.abraham-img-container img{
+  width: 300px;
+}
+
+.beer{
+  max-width: 100%;
+}
+.article-revolution-page{
+ padding-top: 50px;
+ width: 60%;
+}
+
+.don-v{
+  width: 300px;  
+  display: flex;
+  text-align: center;
+  margin: auto;
+  align-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.page-revolution-content2 h3, .page-revolution-content4 h3{
+  display: flex;
+ text-align: center;
+ align-content: center;
+ margin: auto;
+ width: 58%;
+ }
+
+ .page-revolution-content3 img{
+   margin-top: 50px;
+ }
+
+ .page-revolution-content4{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 50px;
+   align-items: center;
+   align-content: center;
+  text-align: center;
+
+ }
+
+ .page-revolution-content4 p{
+   width: 100%;
+ }
+
+ .page-revolution-content4 h2{
+   margin-top: 20px;
+ }
+ .page-revolution-content4 .btn{
+  margin-top: 15px;
+  
+  width: 30%;
+ }
+
+
 /* ! PAGE PHILO */
 .section-pagePhilo {
   margin: 0 auto;
@@ -2004,6 +2112,13 @@ article {
   .image-titre-fonctionnement {
     margin-top: 0px;
   }
+    /*page-revolution*/
+    .content-revolution1{
+      display: flex;
+     flex-direction: column;
+     
+    }
+  
 }
 @media screen and (min-width: 425px) {
   /* MOUVEMENT */
@@ -2029,6 +2144,13 @@ article {
   .image-titre-fonctionnement {
     margin-top: 0px;
   }
+    /*page-revolution*/
+    .content-revolution1{
+      display: flex;
+     flex-direction: column;
+     
+    }
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -2176,6 +2298,11 @@ article {
     align-items: center;
     align-content: center;
   }
+    /*page-revolution*/
+    .content-revolution1{
+      display: flex;
+     flex-direction: column;
+    }
 }
 @media screen and (min-width: 1024px) {
   /* NAVBAR */
@@ -2370,6 +2497,14 @@ article {
   .image-titre-fonctionnement {
     margin-top: 100px;
   }
+
+   /*PageNotreRevolution */
+   .content-revolution1{
+    display: flex;
+   flex-direction: row;
+    justify-content: space-around;
+   
+  }
 }
 @media screen and (min-width: 1440px) {
   /* NAVBAR */
@@ -2451,5 +2586,12 @@ article {
 
   .image-titre-fonctionnement {
     margin-top: 100px;
+  }
+  /*PageNotreRevolution */
+  .content-revolution1{
+    display: flex;
+   flex-direction: row;
+    justify-content: space-around;
+   
   }
 }
