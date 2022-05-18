@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import Donation from './components/donation/donation';
+import Pay from './components/stripe/Pay';
 // ! FILES
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -20,7 +21,8 @@ const App = () => {
         {/* <Route path="/register" element={user ? <Navigate to="/" replace /> : <Register />} /> */}
         {/*route pour aller vers la page d'identification pour l'admin */}
         {/* <Route path='/admin/123456' element={<Admin />} /> */}
-        <Route path='/payment' element={<Donation />} />
+        <Route path='/donation' element={<Donation />} />
+        <Route path='/payment' element={<Pay />} />
       </Routes>
     </Router>
   );
