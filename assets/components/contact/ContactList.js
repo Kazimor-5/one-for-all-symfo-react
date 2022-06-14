@@ -33,7 +33,7 @@ const ContactList = () => {
       setContacts(newContacts);
     } catch (error) {
       console.log(error);
-      console.log(error.resposne);
+      console.log(error.response);
     }
   };
 
